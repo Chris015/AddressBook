@@ -2,6 +2,7 @@ package se.nackademin.christopherolsson.adressbook.user_interface;
 
 import se.nackademin.christopherolsson.adressbook.commands.AddContactCommand;
 import se.nackademin.christopherolsson.adressbook.commands.Command;
+import se.nackademin.christopherolsson.adressbook.commands.DeleteContactCommand;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
 
 /**
@@ -29,7 +30,11 @@ public class CommandInterpreter {
             case "add":
                 returnCommand = new AddContactCommand(console,registry,commandLine.getParameters());
                 break;
-
+            case "delete":
+                returnCommand = new DeleteContactCommand(console,registry,commandLine.getParameters());
+                break;
+            case "list":
+                break;
 
             default:
                 //Throws
