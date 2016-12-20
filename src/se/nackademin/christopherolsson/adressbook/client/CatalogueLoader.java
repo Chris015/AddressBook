@@ -10,8 +10,8 @@ import java.util.List;
  */
 public class CatalogueLoader {
 
-    RemoteRegistry remoteRegistry;
-    RemoteCatalogueFactorty remoteCatalogueFactorty;
+    private RemoteRegistry remoteRegistry;
+    private RemoteCatalogueFactorty remoteCatalogueFactorty;
 
     public void run(){
         new Thread(() -> {
