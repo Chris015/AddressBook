@@ -1,6 +1,7 @@
-package se.nackademin.christopherolsson.adressbook.registry;
+package se.nackademin.christopherolsson.adressbook.registry.remote_registry;
 
 import se.nackademin.christopherolsson.adressbook.Contact;
+import se.nackademin.christopherolsson.adressbook.registry.ContactDetails;
 
 /**
  * Created by Robin Gk on 2016-12-20 as a school project.

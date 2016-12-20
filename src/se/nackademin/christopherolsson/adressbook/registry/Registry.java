@@ -13,12 +13,8 @@ public class Registry {
     private List<Contact> contactList;
 
 
-    void addContact(String firstName, String lastName, String eMailAddress) {
+    public void addContact(String firstName, String lastName, String eMailAddress) {
         contactList.add(new LocalContact(firstName, lastName, eMailAddress, UUID.randomUUID()));
-    }
-
-    public List<Contact> getContacts() {
-        return this.contactList;
     }
 
     public void deleteContact(String id) {
@@ -43,6 +39,10 @@ public class Registry {
 
     public void load(List<Contact> contacts) {
         this.contactList.addAll(contacts);
+    }
+
+    public List<Contact> getContacts() {
+        return this.contactList;
     }
 
 }
