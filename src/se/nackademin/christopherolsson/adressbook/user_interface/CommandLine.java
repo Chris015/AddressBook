@@ -11,7 +11,14 @@ public class CommandLine {
 
     CommandLine parse(String inputCommand)
     {
-
         return null; //TODO: Write code
+    }
+
+    public String getCommand() {
+        return command;
+    }
+
+    public List<String> getParameters() {
+        return parameters;
     }
 }

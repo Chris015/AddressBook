@@ -1,12 +1,17 @@
 package se.nackademin.christopherolsson.adressbook.user_interface;
 
+import se.nackademin.christopherolsson.adressbook.commands.Command;
+
 /**
  * @author Christopher Olsson on 2016-12-20.
  */
 public class CommandInterpreter {
 
-    public void interpret(CommandLine commandLine) {
-
+    public Command interpret(CommandLine commandLine)
+    {
+        String command = commandLine.getCommand();
+        // TODO if valid command, return command, else throw invalid command exception
+        return null;
     }
 
 }
