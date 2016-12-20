@@ -16,19 +16,16 @@ public class Console implements ConsolePrinter {
         System.out.println(inputLine);
     }
 
-    void registerInputHandler(InputHandler inputHandler)
-    {
+    void registerInputHandler(InputHandler inputHandler) {
         this.inputHandler = inputHandler;
     }
 
-    void readInput()
-    {
-        Scanner consoleReader = new Scanner(System.in);
-
-        String input = consoleReader.nextLine();
-
-
-
+    void readInput() {
+        while (true) {
+            Scanner consoleReader = new Scanner(System.in);
+            String input = consoleReader.nextLine();
+            inputHandler.handle(CommandLine.parse(input));
+        }
 
     }
 

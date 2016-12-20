@@ -9,6 +9,7 @@ public class CommandInterpreter {
 
     public Command interpret(CommandLine commandLine)
     {
+        System.out.println(commandLine.getCommand());
         String command = commandLine.getCommand();
         // TODO if valid command, return command, else throw invalid command exception
         return null;

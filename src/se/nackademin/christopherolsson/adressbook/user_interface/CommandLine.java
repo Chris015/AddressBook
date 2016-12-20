@@ -10,22 +10,26 @@ public class CommandLine {
     String command;
     List<String> parameters;
 
+    public CommandLine(String command, List<String> parameters) {
+        this.command = command;
+        this.parameters = parameters;
+    }
 
-    CommandLine parse(String inputCommand)
+    static CommandLine parse(String inputCommand)
     {
         String input = inputCommand;
         input = input.trim().replaceAll(" +", " ");
         String[] inputParts = input.split(" ");
 
-        command = inputParts[0];
+        String command = inputParts[0];
 
-        parameters = new ArrayList<String>();
+        List<String> parameters = new ArrayList<>();
         for (int i = 1; i < inputParts.length; i++)
         {
             parameters.add(inputParts[i]);
         }
 
-        return this;
+        return new CommandLine(command, parameters);
     }
 
 
