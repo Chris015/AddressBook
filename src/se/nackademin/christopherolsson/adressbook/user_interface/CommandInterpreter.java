@@ -37,7 +37,7 @@ public class CommandInterpreter {
                 break;
 
             default:
-                //Throws
+                //TODO: Adds throws exception for unknown command.
                 break;
 
         }

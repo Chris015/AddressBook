@@ -8,7 +8,7 @@ import se.nackademin.christopherolsson.adressbook.registry.Registry;
  */
 public class CommandLineInterface implements InputHandler {
 
-    private Registry registry = new Registry(); //TODO: The actual registry
+    private Registry registry = new Registry(); //TODO: Needs the actual Registry.
     private Console console = new Console();
     private CommandInterpreter interpreter = new CommandInterpreter(console,registry);
 
