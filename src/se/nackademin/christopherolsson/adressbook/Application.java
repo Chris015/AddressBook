@@ -17,6 +17,7 @@ public class Application {
     {
         CommandLineInterface commandLineInterface = new CommandLineInterface();
 
+
     }
 
     public void quit()
