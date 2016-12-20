@@ -10,14 +10,10 @@ import java.util.UUID;
  */
 public class LocalContact implements Contact {
     private final UUID id;
-    private final String firstName;
-    private final String lastName;
-    private final String eMailAddress;
+    ContactDetails contactDetails;
 
     public LocalContact(String firstName, String lastName, String eMailAddress, UUID id) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.eMailAddress = eMailAddress;
+        contactDetails = new ContactDetails(firstName, lastName, eMailAddress);
         this.id = id;
     }
 
@@ -29,16 +25,16 @@ public class LocalContact implements Contact {
 
     @Override
     public String getFirstName() {
-        return this.firstName;
+        return contactDetails.getFirstName();
     }
 
     @Override
     public String getLastName() {
-        return this.lastName;
+        return contactDetails.getLastName();
     }
 
     @Override
     public String getEmailAdress() {
-        return this.eMailAddress;
+        return contactDetails.geteMailAddress();
     }
 }

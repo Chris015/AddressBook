@@ -8,26 +8,30 @@ import se.nackademin.christopherolsson.adressbook.Contact;
  */
 public class RemoteContact implements Contact{
     private String id;
+    ContactDetails contactDetails;
 
-
+    public RemoteContact(String firstName, String lastName, String eMailAddress, String id) {
+        contactDetails = new ContactDetails(firstName, lastName, eMailAddress);
+        this.id = id;
+    }
 
     @Override
     public String getId() {
-        return null;
+        return this.id;
     }
 
     @Override
     public String getFirstName() {
-        return null;
+        return contactDetails.getFirstName();
     }
 
     @Override
     public String getLastName() {
-        return null;
+        return contactDetails.getLastName();
     }
 
     @Override
     public String getEmailAdress() {
-        return null;
+        return contactDetails.geteMailAddress();
     }
 }
