@@ -1,23 +1,44 @@
 package se.nackademin.christopherolsson.adressbook.user_interface;
 
+import se.nackademin.christopherolsson.adressbook.commands.AddContactCommand;
 import se.nackademin.christopherolsson.adressbook.commands.Command;
+import se.nackademin.christopherolsson.adressbook.registry.Registry;
 
 /**
  * @author Christopher Olsson on 2016-12-20.
  */
 public class CommandInterpreter {
 
+    private Console console;
+    private Registry registry;
+
+    public CommandInterpreter(Console console, Registry registry) {
+        this.console = console;
+        this.registry = registry;
+    }
+
     public Command interpret(CommandLine commandLine)
     {
         System.out.println(commandLine.getCommand());
         String command = commandLine.getCommand();
-        for (ValidCommands validCommand : ValidCommands.values()) {
-            if(command.equals(validCommand.name().toLowerCase())) {
 
-            }
+        Command returnCommand = null;
+
+        switch (command)
+        {
+            case "add":
+                returnCommand = new AddContactCommand(console,registry,commandLine.getParameters());
+                break;
+
+
+            default:
+                //Throws
+                break;
+
         }
-        // TODO if valid command, return command, else throw invalid command exception
-        return null;
+
+
+        return returnCommand;
     }
 
 }
