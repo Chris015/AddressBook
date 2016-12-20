@@ -2,6 +2,7 @@ package se.nackademin.christopherolsson.adressbook.user_interface;
 
 import se.nackademin.christopherolsson.adressbook.commands.Command;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
+import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
 
 /**
  * Created by Fredrik Grimmenhag on 2016-12-20.
@@ -9,8 +10,9 @@ import se.nackademin.christopherolsson.adressbook.registry.Registry;
 public class CommandLineInterface implements InputHandler {
 
     private Registry registry = new Registry(); //TODO: Needs the actual Registry.
+    private RemoteRegistry remoteRegistry = new RemoteRegistry();
     private Console console = new Console();
-    private CommandInterpreter interpreter = new CommandInterpreter(console,registry);
+    private CommandInterpreter interpreter = new CommandInterpreter(console,registry, remoteRegistry);
 
 
     public CommandLineInterface()

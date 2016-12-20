@@ -5,6 +5,7 @@ import se.nackademin.christopherolsson.adressbook.commands.Command;
 import se.nackademin.christopherolsson.adressbook.commands.DeleteContactCommand;
 import se.nackademin.christopherolsson.adressbook.commands.ListContactsCommand;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
+import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
 
 /**
  * @author Christopher Olsson on 2016-12-20.
@@ -13,10 +14,12 @@ public class CommandInterpreter {
 
     private Console console;
     private Registry registry;
+    private RemoteRegistry remoteRegistry;
 
-    public CommandInterpreter(Console console, Registry registry) {
+    public CommandInterpreter(Console console, Registry registry, RemoteRegistry remoteRegistry) {
         this.console = console;
         this.registry = registry;
+        this.remoteRegistry = remoteRegistry;
     }
 
     public Command interpret(CommandLine commandLine)
@@ -35,7 +38,7 @@ public class CommandInterpreter {
                 returnCommand = new DeleteContactCommand(console,registry,commandLine.getParameters());
                 break;
             case "list":
-                returnCommand = new ListContactsCommand(console, registry, commandLine.getParameters());
+                returnCommand = new ListContactsCommand(console, registry, remoteRegistry, commandLine.getParameters());
                 break;
 
             default:

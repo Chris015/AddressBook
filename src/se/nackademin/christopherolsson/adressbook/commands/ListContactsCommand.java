@@ -2,6 +2,7 @@ package se.nackademin.christopherolsson.adressbook.commands;
 
 import se.nackademin.christopherolsson.adressbook.Contact;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
+import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 
 import java.util.ArrayList;
@@ -17,11 +18,13 @@ public class ListContactsCommand implements Command{
 
     private ConsolePrinter consolePrinter;
     private Registry registry;
+    private RemoteRegistry remoteRegistry;
     private ArrayList<String> parameters;
 
-    public ListContactsCommand(ConsolePrinter consolePrinter, Registry registry, ArrayList<String> parameters) {
+    public ListContactsCommand(ConsolePrinter consolePrinter, Registry registry, RemoteRegistry remoteRegistry, ArrayList<String> parameters) {
         this.consolePrinter = consolePrinter;
         this.registry = registry;
+        this.remoteRegistry = remoteRegistry;
         this.parameters = parameters;
     }
 
@@ -39,6 +42,9 @@ public class ListContactsCommand implements Command{
     public void execute() {
         if(validate()) {
             List<Contact> contactList = registry.getContacts();
+            for (Contact contact : remoteRegistry.getContacts()) {
+                contactList.add(contact);
+            }
             for (Contact contact : contactList) {
                 consolePrinter.print(contact.getId() + "\n" +
                         contact.getFirstName() + "\n" +

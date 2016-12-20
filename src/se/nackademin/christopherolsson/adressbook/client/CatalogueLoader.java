@@ -11,7 +11,7 @@ import java.util.List;
 public class CatalogueLoader {
 
     RemoteRegistry remoteRegistry;
-    RemoteCatalogueFactorty remoteCatalogueFactorty;
+    RemoteCatalogueFactorty remoteCatalogueFactorty = new RemoteCatalogueFactorty(61616);
 
     public void run(){
         new Thread(() -> {
