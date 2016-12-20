@@ -11,6 +11,11 @@ public class CommandInterpreter {
     {
         System.out.println(commandLine.getCommand());
         String command = commandLine.getCommand();
+        for (ValidCommands validCommand : ValidCommands.values()) {
+            if(command.equals(validCommand.name().toLowerCase())) {
+
+            }
+        }
         // TODO if valid command, return command, else throw invalid command exception
         return null;
     }
