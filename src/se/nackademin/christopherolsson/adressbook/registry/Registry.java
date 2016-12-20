@@ -15,7 +15,7 @@ public class Registry {
 
 
     void addContact (String firstName, String lastName, String eMailAddress){
-        contactList.add(new LocalContact(firstName,lastName,eMailAddress, UUID.randomUUID().toString()));
+        contactList.add(new LocalContact(firstName,lastName,eMailAddress, UUID.randomUUID()));
     }
 
     List<Contact> getContacts(){
