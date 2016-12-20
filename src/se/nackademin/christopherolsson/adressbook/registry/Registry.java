@@ -17,11 +17,11 @@ public class Registry {
         contactList.add(new LocalContact(firstName, lastName, eMailAddress, UUID.randomUUID()));
     }
 
-    List<Contact> getContacts() {
+    public List<Contact> getContacts() {
         return this.contactList;
     }
 
-    void deleteContact(String id) {
+    public void deleteContact(String id) {
         // TODO redundant assignment?
         for (int i = contactList.size(); i > -1; i--) {
             if (contactList.get(i).getId().equals(id)) {
@@ -30,7 +30,7 @@ public class Registry {
         }
     }
 
-    List<Contact> search(String term) {
+    public List<Contact> search(String term) {
         List<Contact> searchResults = null;
         for (Contact contact : contactList) {
             if (contact.getFirstName().toLowerCase().startsWith(term.toLowerCase()) ||
@@ -41,7 +41,7 @@ public class Registry {
         return searchResults;
     }
 
-    void load(List<Contact> contacts) {
+    public void load(List<Contact> contacts) {
         this.contactList.addAll(contacts);
     }
 

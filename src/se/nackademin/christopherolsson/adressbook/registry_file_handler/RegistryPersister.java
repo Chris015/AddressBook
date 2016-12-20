@@ -1,4 +1,10 @@
-package se.nackademin.christopherolsson.adressbook.RegistryFileHandler;
+package se.nackademin.christopherolsson.adressbook.registry_file_handler;
+
+import se.nackademin.christopherolsson.adressbook.Contact;
+import se.nackademin.christopherolsson.adressbook.registry.Registry;
+
+import java.io.*;
+import java.util.List;
 
 /**
  * Created by Robin Gk on 2016-12-20 as a school project.
@@ -6,15 +12,32 @@ package se.nackademin.christopherolsson.adressbook.RegistryFileHandler;
  */
 public class RegistryPersister {
 
-    AutoSave autoSave = new AutoSave();
+    private File file = new File("");
+    private Registry registry;
 
-    public void load(){
-
+    public RegistryPersister(Registry registry) {
+        this.registry = registry;
     }
 
-    public void save(){
+    public void load() {
 
-
+        if (file.isFile()) {
+            try (FileInputStream fis = new FileInputStream(file);
+                 ObjectInputStream ois = new ObjectInputStream(fis)) {
+                registry.load((List<Contact>) ois.readObject());
+            } catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
+                registry.load(null);
+            }
+        }
     }
 
+    public synchronized void save() {
+        try (FileOutputStream fos = new FileOutputStream(file);
+             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+            oos.writeObject(registry.getContacts());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
