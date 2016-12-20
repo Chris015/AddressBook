@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="515d4eff-20dc-40e2-852a-9953825f6519" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/Contact.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/Contact.java" afterPath="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/Contact.java" />
     </list>
     <ignored path="Adress Book.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="Contact.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/Contact.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+            <state relative-caret-position="119">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -50,6 +49,13 @@
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/Contact.java" />
+      </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -554,12 +560,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1482227192690</updated>
-      <workItem from="1482227196130" duration="595000" />
+      <workItem from="1482227196130" duration="1008000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="595000" />
+    <option name="totallyTimeSpent" value="1008000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="654" y="0" width="1195" height="1087" extended-state="0" />
@@ -609,8 +615,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/Contact.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        <state relative-caret-position="119">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
           <folding />
         </state>
       </provider>
