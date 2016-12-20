@@ -9,10 +9,16 @@ import se.nackademin.christopherolsson.adressbook.registry.remote_registry.Remot
 public class CatalogueLoader {
 
     RemoteRegistry remoteRegistry;
+    RemoteCatalogueFactorty remoteCatalogueFactorty;
 
     public void run(){
+        new Thread(() -> {
+            while (true) {
+                remoteCatalogueFactorty.create("localhost");
+            }
+        }).start();
 
-        remoteRegistry.add();
+
 
     }
 
