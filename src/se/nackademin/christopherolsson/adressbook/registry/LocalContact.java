@@ -40,6 +40,3 @@ public class LocalContact implements Contact {
         return this.eMailAddress;
     }
 }
-
-
-}
