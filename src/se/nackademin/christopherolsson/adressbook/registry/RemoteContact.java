@@ -7,8 +7,8 @@ import se.nackademin.christopherolsson.adressbook.Contact;
  * email kallrobin92@gmail.com
  */
 public class RemoteContact implements Contact{
-    private String id;
-    ContactDetails contactDetails;
+    private final String id;
+    private ContactDetails contactDetails;
 
     public RemoteContact(String firstName, String lastName, String eMailAddress, String id) {
         contactDetails = new ContactDetails(firstName, lastName, eMailAddress);

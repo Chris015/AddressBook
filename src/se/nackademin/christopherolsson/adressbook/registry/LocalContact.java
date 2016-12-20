@@ -10,7 +10,7 @@ import java.util.UUID;
  */
 public class LocalContact implements Contact {
     private final UUID id;
-    ContactDetails contactDetails;
+    private ContactDetails contactDetails;
 
     public LocalContact(String firstName, String lastName, String eMailAddress, UUID id) {
         contactDetails = new ContactDetails(firstName, lastName, eMailAddress);
