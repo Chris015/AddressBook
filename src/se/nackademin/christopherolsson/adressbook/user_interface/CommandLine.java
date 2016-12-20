@@ -1,5 +1,6 @@
 package se.nackademin.christopherolsson.adressbook.user_interface;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,10 +10,24 @@ public class CommandLine {
     String command;
     List<String> parameters;
 
+
     CommandLine parse(String inputCommand)
     {
-        return null; //TODO: Write code
+        String input = inputCommand;
+        input = input.trim().replaceAll(" +", " ");
+        String[] inputParts = input.split(" ");
+
+        command = inputParts[0];
+
+        parameters = new ArrayList<String>();
+        for (int i = 1; i < inputParts.length; i++)
+        {
+            parameters.add(inputParts[i]);
+        }
+
+        return this;
     }
+
 
     public String getCommand() {
         return command;
@@ -21,4 +36,5 @@ public class CommandLine {
     public List<String> getParameters() {
         return parameters;
     }
+
 }
