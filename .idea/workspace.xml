@@ -31,6 +31,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="ContactDetails.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/registry/ContactDetails.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -44,6 +45,14 @@
                 <element signature="e#655#656#0" expanded="true" />
                 <element signature="e#690#691#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="InputHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/InputHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+>>>>>>> 13a2807ccad76988f2e2c3ddc72fa3449c7dd859
             </state>
           </provider>
         </entry>
@@ -51,6 +60,7 @@
       <file leaf-file-name="LocalContact.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/registry/LocalContact.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="136">
               <caret line="14" column="79" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="79" />
               <folding>
@@ -64,10 +74,16 @@
                 <element signature="e#889#890#0" expanded="true" />
                 <element signature="e#944#945#0" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="119">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+>>>>>>> 13a2807ccad76988f2e2c3ddc72fa3449c7dd859
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="RemoteContact.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/registry/RemoteContact.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -82,10 +98,19 @@
                 <element signature="e#852#853#0" expanded="true" />
                 <element signature="e#907#908#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="ConsolePrinter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/ConsolePrinter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+              <folding />
+>>>>>>> 13a2807ccad76988f2e2c3ddc72fa3449c7dd859
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Registry.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/registry/Registry.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -98,6 +123,27 @@
                 <element signature="e#1600#1601#0" expanded="true" />
                 <element signature="e#1649#1650#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="Console.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/Console.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="e#228#229#0" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandLineInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/CommandLineInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+>>>>>>> 13a2807ccad76988f2e2c3ddc72fa3449c7dd859
             </state>
           </provider>
         </entry>
@@ -126,9 +172,18 @@
         <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/registry/Contact.java" />
         <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/registry/Registry.java" />
         <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/Contact.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/registry/ContactDetails.java" />
         <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/registry/LocalContact.java" />
         <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/registry/RemoteContact.java" />
+=======
+        <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/CommandLine.java" />
+        <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/ConsoleInterface.java" />
+        <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/ConsolePrinter.java" />
+        <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/Console.java" />
+        <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/InputHandler.java" />
+        <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/CommandLineInterface.java" />
+>>>>>>> 13a2807ccad76988f2e2c3ddc72fa3449c7dd859
       </list>
     </option>
   </component>
@@ -141,8 +196,23 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
+<<<<<<< HEAD
     <option name="width" value="1382" />
     <option name="height" value="754" />
+=======
+    <option name="width" value="1858" />
+    <option name="height" value="1096" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+>>>>>>> 13a2807ccad76988f2e2c3ddc72fa3449c7dd859
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -644,16 +714,29 @@
       <created>1482229676731</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
       <updated>1482229676731</updated>
       <workItem from="1482229678623" duration="4122000" />
+=======
+      <updated>1482227192690</updated>
+      <workItem from="1482227196130" duration="1008000" />
+      <workItem from="1482228740985" duration="3603000" />
+>>>>>>> 13a2807ccad76988f2e2c3ddc72fa3449c7dd859
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="4122000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="4611000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1858" height="1096" extended-state="6" />
+>>>>>>> 13a2807ccad76988f2e2c3ddc72fa3449c7dd859
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -666,12 +749,20 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17698154" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> 13a2807ccad76988f2e2c3ddc72fa3449c7dd859
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -713,6 +804,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/registry/LocalContact.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -772,6 +864,48 @@
             <element signature="e#623#624#0" expanded="true" />
             <element signature="e#1600#1601#0" expanded="true" />
             <element signature="e#1649#1650#0" expanded="true" />
+          </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/InputHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/ConsolePrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/CommandLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/CommandLineInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+>>>>>>> 13a2807ccad76988f2e2c3ddc72fa3449c7dd859
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/Console.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
           </folding>
         </state>
       </provider>

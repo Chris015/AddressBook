@@ -3,7 +3,8 @@ package se.nackademin.christopherolsson.adressbook.user_interface;
 /**
  * Created by Fredrik Grimmenhag on 2016-12-20.
  */
-public interface InputHandler {
+public interface ConsolePrinter {
 
-    void handle(CommandLine commandline);
+    void print(String inputLine);
+
 }

@@ -8,4 +8,10 @@ import java.util.List;
 public class CommandLine {
     String command;
     List<String> parameters;
+
+    CommandLine parse(String inputCommand)
+    {
+
+        return null; //TODO: Write code
+    }
 }
