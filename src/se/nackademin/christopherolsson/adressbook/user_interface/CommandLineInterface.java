@@ -5,6 +5,8 @@ package se.nackademin.christopherolsson.adressbook.user_interface;
  */
 public class CommandLineInterface implements InputHandler {
 
+    private Console console = new Console();
+
     @Override
     public void handle(CommandLine commandline) {
         

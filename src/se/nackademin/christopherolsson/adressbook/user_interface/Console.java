@@ -5,6 +5,8 @@ package se.nackademin.christopherolsson.adressbook.user_interface;
  */
 public class Console implements ConsolePrinter {
 
+
+
     @Override
     public void print(String inputLine) {
         System.out.println(inputLine);
