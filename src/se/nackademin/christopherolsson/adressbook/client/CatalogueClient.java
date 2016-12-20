@@ -37,19 +37,24 @@ public class CatalogueClient {
         writer.write(request);
     }
 
-    public String waitForResponse() throws IOException {
+    public String waitForResponse(){
         String response = null;
-        for (String line = reader.readLine(); line != null; line = reader.readLine()) {
-            if (line.equals("")) {
-                break;
+        try {
+            for (String line = reader.readLine(); line != null; line = reader.readLine()) {
+                if (line.equals("")) {
+                    break;
+                }
+                response += line + "-";
             }
-            response += line + "\n";
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return response;
     }
 
     public void diconnect() {
         try {
+            sendRequest("exit");
             this.clientSocket.close();
             this.reader.close();
             this.writer.close();
