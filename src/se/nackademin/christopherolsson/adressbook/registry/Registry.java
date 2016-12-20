@@ -2,6 +2,7 @@ package se.nackademin.christopherolsson.adressbook.registry;
 
 import se.nackademin.christopherolsson.adressbook.Contact;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -10,7 +11,7 @@ import java.util.UUID;
  * email kallrobin92@gmail.com
  */
 public class Registry {
-    private List<Contact> contactList;
+    private List<Contact> contactList = new ArrayList<>();
 
 
     public void addContact(String firstName, String lastName, String eMailAddress) {

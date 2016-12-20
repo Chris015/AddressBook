@@ -1,5 +1,6 @@
 package se.nackademin.christopherolsson.adressbook.user_interface;
 
+import se.nackademin.christopherolsson.adressbook.commands.Command;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
 
 /**
@@ -7,7 +8,7 @@ import se.nackademin.christopherolsson.adressbook.registry.Registry;
  */
 public class CommandLineInterface implements InputHandler {
 
-    private Registry registry = new Registry(); //TODO: Finish
+    private Registry registry = new Registry(); //TODO: The actual registry
     private Console console = new Console();
     private CommandInterpreter interpreter = new CommandInterpreter(console,registry);
 
@@ -21,6 +22,7 @@ public class CommandLineInterface implements InputHandler {
     @Override
     public void handle(CommandLine commandline)
     {
-        interpreter.interpret(commandline);
+        Command command = interpreter.interpret(commandline);
+        command.execute();
     }
 }

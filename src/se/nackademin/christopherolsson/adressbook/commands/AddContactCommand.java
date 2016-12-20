@@ -35,6 +35,16 @@ public class AddContactCommand implements Command {
 
     @Override
     public void execute() {
-
+        if (validate())
+        {
+            registry.addContact(parameters.get(0),parameters.get(1),parameters.get(2));
+        }
     }
+
+    private boolean validate()
+    {
+        return parameters.size() == 3;
+    }
+
+
 }

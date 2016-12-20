@@ -19,7 +19,7 @@ public class CommandInterpreter {
 
     public Command interpret(CommandLine commandLine)
     {
-        System.out.println(commandLine.getCommand());
+
         String command = commandLine.getCommand();
 
         Command returnCommand = null;
