@@ -25,7 +25,7 @@ public class ContactDetails implements Serializable{
         return lastName;
     }
 
-    public String geteMailAddress() {
+    public String getEmailAddress() {
         return eMailAddress;
     }
 }
