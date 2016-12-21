@@ -10,10 +10,10 @@ import java.io.Serializable;
  * email kallrobin92@gmail.com
  */
 public class RemoteContact implements Contact{
-    private final String id;
+    private String id;
     private ContactDetails contactDetails;
 
-    public RemoteContact(String firstName, String lastName, String eMailAddress, String id) {
+    public RemoteContact(String id, String firstName, String lastName, String eMailAddress) {
         contactDetails = new ContactDetails(firstName, lastName, eMailAddress);
         this.id = id;
     }

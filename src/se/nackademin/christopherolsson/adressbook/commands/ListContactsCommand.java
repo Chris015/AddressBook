@@ -44,7 +44,8 @@ public class ListContactsCommand implements Command{
     public void execute() {
         try {
             if(validate()) {
-                List<Contact> contactList = registry.getContacts();
+                List<Contact> contactList = new ArrayList<>();
+                contactList.addAll(registry.getContacts());
                 contactList.addAll(remoteRegistry.getContacts());
                 contactList = ContactListSorter.sort(contactList);
                 for (Contact contact : contactList) {
@@ -59,10 +60,8 @@ public class ListContactsCommand implements Command{
     {
         if (parameters.size() == 0) {
             return true;
-        }
-        else
-        {
-            throw new InvalidCommandParameterException("Invalid amounts of parameters for command: "+parameters.size());
+        } else {
+            throw new InvalidCommandParameterException("Invalid amounts of parameters for command: " + parameters.size());
         }
     }
 }

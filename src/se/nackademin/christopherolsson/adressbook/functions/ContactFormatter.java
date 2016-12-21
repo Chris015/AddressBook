@@ -8,9 +8,9 @@ import se.nackademin.christopherolsson.adressbook.Contact;
 public class ContactFormatter {
 
     public static String format(Contact contact) {
-        return contact.getId() + "\n"
-                + contact.getFirstName() + "\n"
-                + contact.getLastName() + "\n"
-                + contact.getEmailAdress() + "\n";
+        return "Id:\t" + contact.getId() + "\n"
+               + "First Name:\t" + contact.getFirstName() + "\n"
+               + "Last Name:\t" + contact.getLastName() + "\n"
+               + "Email Address:\t" + contact.getEmailAdress() + "\n";
     }
 }
