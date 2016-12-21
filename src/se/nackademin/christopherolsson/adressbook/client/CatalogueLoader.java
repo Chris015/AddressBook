@@ -21,7 +21,7 @@ public class CatalogueLoader {
         new Thread(() -> {
                 List<String> remoteContacts = remoteCatalogueFactory.create("localhost").getContacts();
                 for (int i = 0; i < remoteContacts.size(); i++) {
-                    String[] contactInfo = remoteContacts.get(i).split(",");
+                    String[] contactInfo = remoteContacts.get(i).split(" ");
                     remoteRegistry.add(contactInfo[0], contactInfo[1], contactInfo[2], contactInfo[3]);
                 }
         }).start();
