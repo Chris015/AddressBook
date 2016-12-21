@@ -1,9 +1,6 @@
 package se.nackademin.christopherolsson.adressbook.user_interface;
 
-import se.nackademin.christopherolsson.adressbook.commands.AddContactCommand;
-import se.nackademin.christopherolsson.adressbook.commands.Command;
-import se.nackademin.christopherolsson.adressbook.commands.DeleteContactCommand;
-import se.nackademin.christopherolsson.adressbook.commands.ListContactsCommand;
+import se.nackademin.christopherolsson.adressbook.commands.*;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
 import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
 
@@ -42,7 +39,7 @@ public class CommandInterpreter {
                 break;
 
             default:
-                //TODO: Adds throws exception for unknown command.
+                returnCommand = new UnknownCommand();
                 break;
 
         }
