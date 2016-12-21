@@ -10,8 +10,13 @@ import java.util.List;
  */
 public class CatalogueLoader {
 
+<<<<<<< HEAD
     private RemoteRegistry remoteRegistry;
     private RemoteCatalogueFactorty remoteCatalogueFactorty;
+=======
+    RemoteRegistry remoteRegistry;
+    RemoteCatalogueFactorty remoteCatalogueFactorty = new RemoteCatalogueFactorty(61616);
+>>>>>>> 77397acbfd5d178e9ee9a3b7b4f55a7380579ce3
 
     public void run(){
         new Thread(() -> {
