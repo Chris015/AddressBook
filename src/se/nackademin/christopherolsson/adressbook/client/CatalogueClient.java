@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.net.UnknownHostException;
 
 /**
  * Created by Robin Gk on 2016-12-20 as a school project.
@@ -28,6 +29,8 @@ public class CatalogueClient {
             this.clientSocket = new Socket(host, port);
             writer = new PrintWriter(clientSocket.getOutputStream());
             reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+        } catch (UnknownHostException h){
+            System.out.println("Host with name: " + host + " on port: " + port + " could not be reached.");
         } catch (IOException e) {
             e.printStackTrace();
         }
