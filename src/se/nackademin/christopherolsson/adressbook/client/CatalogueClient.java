@@ -49,7 +49,6 @@ public class CatalogueClient {
                     break;
                 } else {
                     response += line + "/";
-                    System.out.println(response);
                 }
             }
         } catch (IOException e) {
