@@ -4,6 +4,7 @@ package se.nackademin.christopherolsson.adressbook.registry.remote_registry;
 
 import se.nackademin.christopherolsson.adressbook.Contact;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -13,7 +14,7 @@ import java.util.UUID;
  */
 public class RemoteRegistry {
 
-   private List<Contact> remoteContactList;
+   private List<Contact> remoteContactList = new ArrayList<Contact>();
 
     public void add(String firstName, String lastName, String eMailAddress, String id) {
         remoteContactList.add(new RemoteContact(firstName, lastName, eMailAddress, id));

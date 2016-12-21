@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="959436e7-c17f-4898-afc0-3557dd9c7428" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/client/CatalogueLoader.java" afterPath="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/client/CatalogueLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/registry/remote_registry/RemoteRegistry.java" afterPath="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/registry/remote_registry/RemoteRegistry.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -74,13 +75,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CatalogueLoader.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CatalogueLoader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/client/CatalogueLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+            <state relative-caret-position="425">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RemoteRegistry.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/registry/remote_registry/RemoteRegistry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="16" column="68" lean-forward="false" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+              <folding>
+                <element signature="e#401#410#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,6 +136,7 @@
         <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/CommandLineInterface.java" />
         <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/user_interface/CommandInterpreter.java" />
         <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/client/CatalogueLoader.java" />
+        <option value="$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/registry/remote_registry/RemoteRegistry.java" />
       </list>
     </option>
   </component>
@@ -181,6 +195,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="adressbook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddressBookGroup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddressBookGroup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adressbook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="registry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddressBookGroup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddressBookGroup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adressbook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="registry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="remote_registry" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -656,12 +718,12 @@
       <updated>1482238556314</updated>
       <workItem from="1482238557394" duration="93000" />
       <workItem from="1482238662763" duration="6564000" />
-      <workItem from="1482245673023" duration="399000" />
+      <workItem from="1482245673023" duration="745000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7056000" />
+    <option name="totallyTimeSpent" value="7402000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -875,10 +937,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/client/CatalogueLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/nackademin/christopherolsson/adressbook/registry/remote_registry/RemoteRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="68" lean-forward="false" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+          <folding>
+            <element signature="e#401#410#0" expanded="true" />
           </folding>
         </state>
       </provider>
