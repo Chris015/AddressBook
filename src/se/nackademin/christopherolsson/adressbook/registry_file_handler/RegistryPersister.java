@@ -27,7 +27,6 @@ public class RegistryPersister {
                 registry.load((List<Contact>) ois.readObject());
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
-                registry.load(null);
             }
         }
     }
