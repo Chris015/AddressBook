@@ -1,4 +1,4 @@
-package se.nackademin.christopherolsson.adressbook.Functions;
+package se.nackademin.christopherolsson.adressbook.functions;
 
 import se.nackademin.christopherolsson.adressbook.Contact;
 
@@ -11,6 +11,6 @@ public class ContactFormatter {
         return contact.getId() + "\n"
                 + contact.getFirstName() + "\n"
                 + contact.getLastName() + "\n"
-                + contact.getEmailAdress();
+                + contact.getEmailAdress() + "\n";
     }
 }

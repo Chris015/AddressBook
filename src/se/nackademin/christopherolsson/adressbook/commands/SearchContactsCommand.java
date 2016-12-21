@@ -7,28 +7,29 @@ import se.nackademin.christopherolsson.adressbook.registry.Registry;
 import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 
+import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Christopher Olsson on 2016-12-20.
+ * @author Christopher Olsson on 2016-12-21.
  */
-public class ListContactsCommand implements Command{
-
-    private String name = "list";
-    private String description = "Lists contacts in registry";
+public class SearchContactsCommand implements Command{
+    private String name = "search";
+    private String description = "Searches after contacts";
 
     private ConsolePrinter consolePrinter;
     private Registry registry;
     private RemoteRegistry remoteRegistry;
-    private ArrayList<String> parameters;
+    private List<String> parameters;
 
-    public ListContactsCommand(ConsolePrinter consolePrinter, Registry registry, RemoteRegistry remoteRegistry, ArrayList<String> parameters) {
+    public SearchContactsCommand(ConsolePrinter consolePrinter, Registry registry, RemoteRegistry remoteRegistry, ArrayList<String> parameters) {
         this.consolePrinter = consolePrinter;
         this.registry = registry;
         this.remoteRegistry = remoteRegistry;
         this.parameters = parameters;
     }
+
 
     @Override
     public String getName() {
@@ -42,17 +43,19 @@ public class ListContactsCommand implements Command{
 
     @Override
     public void execute() {
+        //TODO: Log shit here
         if(validate()) {
-            List<Contact> contactList = registry.getContacts();
-            contactList.addAll(remoteRegistry.getContacts());
+            List<Contact> contactList = new ArrayList<>();
+            contactList.addAll(registry.search(parameters.get(0)));
+            contactList.addAll(remoteRegistry.search(parameters.get(0)));
             contactList = ContactListSorter.sort(contactList);
             for (Contact contact : contactList) {
                 consolePrinter.print(ContactFormatter.format(contact));
             }
         }
     }
-    private boolean validate()
-    {
-        return parameters.size() == 0;
+
+    private boolean validate() {
+        return parameters.size() == 1;
     }
 }
