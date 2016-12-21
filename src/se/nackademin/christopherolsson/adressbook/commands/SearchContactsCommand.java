@@ -7,9 +7,9 @@ import se.nackademin.christopherolsson.adressbook.registry.Registry;
 import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 
-import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * @author Christopher Olsson on 2016-12-21.
