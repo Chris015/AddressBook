@@ -1,6 +1,5 @@
 package se.nackademin.christopherolsson.adressbook;
 
-import se.nackademin.christopherolsson.adressbook.client.CatalogueLoader;
 import se.nackademin.christopherolsson.adressbook.user_interface.CommandLineInterface;
 
 /**
@@ -14,14 +13,10 @@ public class Application {
         application.start();
     }
 
-    public void start()
-    {
-        CommandLineInterface commandLineInterface = new CommandLineInterface();
-    }
+    private void start() {new CommandLineInterface(this);}
 
-    public void quit()
-    {
-
-    }
+    public void quit() {
+        System.out.println("HEJ");
+        System.exit(0);}
 
 }
