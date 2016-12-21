@@ -16,8 +16,8 @@ public class RemoteRegistry {
 
    private List<Contact> remoteContactList = new ArrayList<>();
 
-    public void add(String firstName, String lastName, String eMailAddress, String id) {
-        remoteContactList.add(new RemoteContact(firstName, lastName, eMailAddress, id));
+    public void add(String id, String firstName, String lastName, String eMailAddress) {
+        remoteContactList.add(new RemoteContact(id, firstName, lastName, eMailAddress));
     }
 
     public List<Contact> search(String term) {
