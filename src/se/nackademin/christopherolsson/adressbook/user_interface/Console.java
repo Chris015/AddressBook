@@ -16,7 +16,7 @@ public class Console implements ConsolePrinter {
         System.out.println(inputLine);
     }
 
-    void registerInputHandler(InputHandler inputHandler) {
+    public void registerInputHandler(InputHandler inputHandler) {
         this.inputHandler = inputHandler;
     }
 

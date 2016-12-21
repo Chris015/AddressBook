@@ -23,6 +23,8 @@ public class SearchContactsCommand implements Command{
     private RemoteRegistry remoteRegistry;
     private List<String> parameters;
 
+    public SearchContactsCommand() {}
+
     public SearchContactsCommand(ConsolePrinter consolePrinter, Registry registry, RemoteRegistry remoteRegistry, ArrayList<String> parameters) {
         this.consolePrinter = consolePrinter;
         this.registry = registry;

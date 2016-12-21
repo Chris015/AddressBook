@@ -23,6 +23,8 @@ public class ListContactsCommand implements Command{
     private RemoteRegistry remoteRegistry;
     private ArrayList<String> parameters;
 
+    public ListContactsCommand() {}
+
     public ListContactsCommand(ConsolePrinter consolePrinter, Registry registry, RemoteRegistry remoteRegistry, ArrayList<String> parameters) {
         this.consolePrinter = consolePrinter;
         this.registry = registry;

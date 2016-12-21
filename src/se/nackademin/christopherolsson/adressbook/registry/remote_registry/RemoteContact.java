@@ -34,7 +34,7 @@ public class RemoteContact implements Contact{
     }
 
     @Override
-    public String getEmailAdress() {
+    public String getEmailAddress() {
         return contactDetails.geteMailAddress();
     }
 }

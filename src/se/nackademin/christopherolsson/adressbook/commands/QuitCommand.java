@@ -21,6 +21,8 @@ public class QuitCommand implements Command {
     private ConsolePrinter consolePrinter;
     private List<String> parameters;
 
+    public QuitCommand() {}
+
     public QuitCommand(Application application, RegistryPersister registryPersister, ConsolePrinter consolePrinter, ArrayList<String> parameters) {
         this.application = application;
         this.registryPersister = registryPersister;
@@ -40,14 +42,14 @@ public class QuitCommand implements Command {
 
     @Override
     public void execute() {
-        if (true) {
+        if (validate()) {
             registryPersister.save();
             consolePrinter.print("Goodbye!");
             application.quit();
         }
     }
-//
-//    private boolean validate(){
-//        return parameters.size() == 0;
-//    }
+
+    private boolean validate() {
+        return parameters.size() == 0;
+    }
 }

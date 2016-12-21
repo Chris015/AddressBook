@@ -17,6 +17,8 @@ public class AddContactCommand implements Command {
     private Registry registry;
     private ArrayList<String> parameters;
 
+    public AddContactCommand() {}
+
     public AddContactCommand(ConsolePrinter consolePrinter, Registry registry, ArrayList<String> parameters) {
         this.consolePrinter = consolePrinter;
         this.registry = registry;
@@ -36,8 +38,7 @@ public class AddContactCommand implements Command {
     @Override
     public void execute(){
         try {
-            if (validate())
-            {
+            if (validate()) {
                 registry.addContact(parameters.get(0),parameters.get(1),parameters.get(2));
             }
         } catch (InvalidCommandParameterException e) {
@@ -46,14 +47,11 @@ public class AddContactCommand implements Command {
 
     }
 
-    private boolean validate() throws InvalidCommandParameterException
-    {
+    private boolean validate() throws InvalidCommandParameterException {
         if (parameters.size() == 3) {
             return true;
-        }
-        else
-        {
-            throw new InvalidCommandParameterException("Invalid amounts of parameters for command: "+parameters.size());
+        } else {
+            throw new InvalidCommandParameterException("Invalid amounts of parameters for command: " + parameters.size());
         }
     }
 

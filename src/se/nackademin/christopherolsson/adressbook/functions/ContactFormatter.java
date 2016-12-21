@@ -11,6 +11,6 @@ public class ContactFormatter {
         return "Id:\t\t\t\t" + contact.getId() + "\n"
                + "First Name:\t\t" + contact.getFirstName() + "\n"
                + "Last Name:\t\t" + contact.getLastName() + "\n"
-               + "Email Address:\t" + contact.getEmailAdress() + "\n";
+               + "Email Address:\t" + contact.getEmailAddress() + "\n";
     }
 }

@@ -17,6 +17,8 @@ public class DeleteContactCommand implements Command {
     private Registry registry;
     private ArrayList<String> parameters;
 
+    public DeleteContactCommand() {}
+
     public DeleteContactCommand(ConsolePrinter consolePrinter, Registry registry, ArrayList<String> parameters) {
         this.consolePrinter = consolePrinter;
         this.registry = registry;
@@ -36,8 +38,7 @@ public class DeleteContactCommand implements Command {
     @Override
     public void execute() {
         try {
-            if (validate())
-            {
+            if (validate()) {
                 registry.deleteContact(parameters.get(0));
             }
         } catch (InvalidCommandParameterException e) {
@@ -45,14 +46,11 @@ public class DeleteContactCommand implements Command {
         }
     }
 
-    private boolean validate() throws InvalidCommandParameterException
-    {
+    private boolean validate() throws InvalidCommandParameterException {
         if (parameters.size() == 1) {
             return true;
-        }
-        else
-        {
-            throw new InvalidCommandParameterException("Invalid amounts of parameters for command: "+parameters.size());
+        } else {
+            throw new InvalidCommandParameterException("Invalid amounts of parameters for command: " + parameters.size());
         }
     }
 

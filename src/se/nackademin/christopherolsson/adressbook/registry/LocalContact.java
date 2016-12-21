@@ -35,7 +35,7 @@ public class LocalContact implements Contact, Serializable {
     }
 
     @Override
-    public String getEmailAdress() {
+    public String getEmailAddress() {
         return contactDetails.geteMailAddress();
     }
 }

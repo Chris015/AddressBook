@@ -16,13 +16,13 @@ public class CatalogueLoader {
 
     private List<String> hosts = new ArrayList<>();
 
-    public CatalogueLoader(RemoteRegistry remoteRegistry, String...hostsAddress) {
+    public CatalogueLoader(RemoteRegistry remoteRegistry, String...hostAddress) {
         this.remoteRegistry = remoteRegistry;
-        addHost(hostsAddress);
+        addHost(hostAddress);
     }
 
-    private void addHost(String[] hostsAddress) {
-        for (String address : hostsAddress) {
+    private void addHost(String[] hostAddress) {
+        for (String address : hostAddress) {
             hosts.add(address);
         }
     }

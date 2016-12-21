@@ -46,6 +46,9 @@ public class CommandInterpreter {
             case "quit":
                 returnCommand = new QuitCommand(application, registryPersister, consolePrinter, commandLine.getParameters());
                 break;
+            case "help":
+                returnCommand = new HelpCommand(consolePrinter, commandLine.getParameters());
+                break;
             default:
                 returnCommand = new UnknownCommand();
                 break;
