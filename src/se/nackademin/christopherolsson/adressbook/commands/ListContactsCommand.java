@@ -1,6 +1,8 @@
 package se.nackademin.christopherolsson.adressbook.commands;
 
 import se.nackademin.christopherolsson.adressbook.Contact;
+import se.nackademin.christopherolsson.adressbook.Functions.ContactFormatter;
+import se.nackademin.christopherolsson.adressbook.Functions.ContactListSorter;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
 import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
@@ -42,14 +44,10 @@ public class ListContactsCommand implements Command{
     public void execute() {
         if(validate()) {
             List<Contact> contactList = registry.getContacts();
-            for (Contact contact : remoteRegistry.getContacts()) {
-                contactList.add(contact);
-            }
+            contactList.addAll(remoteRegistry.getContacts());
+            contactList = ContactListSorter.sort(contactList);
             for (Contact contact : contactList) {
-                consolePrinter.print(contact.getId() + "\n" +
-                        contact.getFirstName() + "\n" +
-                        contact.getLastName() + "\n" +
-                        contact.getEmailAdress() + "\n");
+                consolePrinter.print(ContactFormatter.format(contact));
             }
         }
     }
