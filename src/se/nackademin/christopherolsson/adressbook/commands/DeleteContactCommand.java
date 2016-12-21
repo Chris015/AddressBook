@@ -35,15 +35,25 @@ public class DeleteContactCommand implements Command {
 
     @Override
     public void execute() {
-        if (validate())
-        {
-            registry.deleteContact(parameters.get(0));
+        try {
+            if (validate())
+            {
+                registry.deleteContact(parameters.get(0));
+            }
+        } catch (InvalidCommandParameterException e) {
+            e.printStackTrace();
         }
     }
 
-    private boolean validate()
+    private boolean validate() throws InvalidCommandParameterException
     {
-        return parameters.size() == 1;
+        if (parameters.size() == 1) {
+            return true;
+        }
+        else
+        {
+            throw new InvalidCommandParameterException("Invalid amounts of parameters for command: "+parameters.size());
+        }
     }
 
 

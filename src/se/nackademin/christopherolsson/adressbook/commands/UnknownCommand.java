@@ -22,6 +22,5 @@ public class UnknownCommand implements Command{
     @Override
     public void execute() {
         //TODO: Log shit here
-        System.out.println("Unknown.");
     }
 }
