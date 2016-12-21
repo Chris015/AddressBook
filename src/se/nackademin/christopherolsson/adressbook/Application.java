@@ -16,12 +16,7 @@ public class Application {
 
     public void start()
     {
-        CatalogueLoader catalogueLoader = new CatalogueLoader();
-        catalogueLoader.run();
         CommandLineInterface commandLineInterface = new CommandLineInterface();
-
-
-
     }
 
     public void quit()

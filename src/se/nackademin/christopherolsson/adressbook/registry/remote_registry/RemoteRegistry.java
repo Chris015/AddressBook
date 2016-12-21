@@ -14,7 +14,7 @@ import java.util.UUID;
  */
 public class RemoteRegistry {
 
-   private List<Contact> remoteContactList = new ArrayList<Contact>();
+   private List<Contact> remoteContactList = new ArrayList<>();
 
     public void add(String firstName, String lastName, String eMailAddress, String id) {
         remoteContactList.add(new RemoteContact(firstName, lastName, eMailAddress, id));
