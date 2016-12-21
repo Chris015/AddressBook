@@ -6,7 +6,11 @@ package se.nackademin.christopherolsson.adressbook.registry_file_handler;
  */
 public class AutoSave {
 
-    RegistryPersister registryPersister;
+    private RegistryPersister registryPersister;
+
+    public AutoSave(RegistryPersister registryPersister) {
+        this.registryPersister = registryPersister;
+    }
 
     public void autoSave() {
 

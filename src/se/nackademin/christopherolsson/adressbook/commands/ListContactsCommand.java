@@ -1,8 +1,8 @@
 package se.nackademin.christopherolsson.adressbook.commands;
 
 import se.nackademin.christopherolsson.adressbook.Contact;
-import se.nackademin.christopherolsson.adressbook.Functions.ContactFormatter;
-import se.nackademin.christopherolsson.adressbook.Functions.ContactListSorter;
+import se.nackademin.christopherolsson.adressbook.functions.ContactFormatter;
+import se.nackademin.christopherolsson.adressbook.functions.ContactListSorter;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
 import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
@@ -42,17 +42,27 @@ public class ListContactsCommand implements Command{
 
     @Override
     public void execute() {
-        if(validate()) {
-            List<Contact> contactList = registry.getContacts();
-            contactList.addAll(remoteRegistry.getContacts());
-            contactList = ContactListSorter.sort(contactList);
-            for (Contact contact : contactList) {
-                consolePrinter.print(ContactFormatter.format(contact));
+        try {
+            if(validate()) {
+                List<Contact> contactList = registry.getContacts();
+                contactList.addAll(remoteRegistry.getContacts());
+                contactList = ContactListSorter.sort(contactList);
+                for (Contact contact : contactList) {
+                    consolePrinter.print(ContactFormatter.format(contact));
+                }
             }
+        } catch (InvalidCommandParameterException e) {
+            e.printStackTrace();
         }
     }
-    private boolean validate()
+    private boolean validate() throws InvalidCommandParameterException
     {
-        return parameters.size() == 0;
+        if (parameters.size() == 0) {
+            return true;
+        }
+        else
+        {
+            throw new InvalidCommandParameterException("Invalid amounts of parameters for command: "+parameters.size());
+        }
     }
 }

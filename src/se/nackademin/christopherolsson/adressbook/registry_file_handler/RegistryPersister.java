@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class RegistryPersister {
 
-    private File file = new File("");
+    private File file = new File("contactRegister.txt");
     private Registry registry;
 
     public RegistryPersister(Registry registry) {

@@ -22,8 +22,8 @@ public class AtomicRemoteCatalogueProxy implements RemoteCatalogueProxy {
         List<String> remoteContacts;
         catalogueClient.connect();
         catalogueClient.sendRequest("getall");
-        remoteContacts = Arrays.asList(catalogueClient.waitForResponse().split("/"));
-        catalogueClient.disconnect();
+        remoteContacts = Arrays.asList(catalogueClient.waitForResponse().split("-"));
+        catalogueClient.diconnect();
         return remoteContacts;
     }
 }

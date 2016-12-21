@@ -1,4 +1,4 @@
-package se.nackademin.christopherolsson.adressbook.Functions;
+package se.nackademin.christopherolsson.adressbook.functions;
 
 import se.nackademin.christopherolsson.adressbook.Contact;
 

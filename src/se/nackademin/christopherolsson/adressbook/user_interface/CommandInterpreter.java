@@ -19,31 +19,29 @@ public class CommandInterpreter {
         this.remoteRegistry = remoteRegistry;
     }
 
-    public Command interpret(CommandLine commandLine)
-    {
+    public Command interpret(CommandLine commandLine) {
 
         String command = commandLine.getCommand();
 
-        Command returnCommand = null;
+        Command returnCommand;
 
-        switch (command)
-        {
+        switch (command) {
             case "add":
-                returnCommand = new AddContactCommand(console,registry,commandLine.getParameters());
+                returnCommand = new AddContactCommand(console, registry, commandLine.getParameters());
                 break;
             case "delete":
-                returnCommand = new DeleteContactCommand(console,registry,commandLine.getParameters());
+                returnCommand = new DeleteContactCommand(console, registry, commandLine.getParameters());
                 break;
             case "list":
                 returnCommand = new ListContactsCommand(console, registry, remoteRegistry, commandLine.getParameters());
                 break;
-
+            case "search":
+                returnCommand = new SearchContactsCommand(console, registry, remoteRegistry, commandLine.getParameters());
+                break;
             default:
                 returnCommand = new UnknownCommand();
                 break;
-
         }
-
 
         return returnCommand;
     }

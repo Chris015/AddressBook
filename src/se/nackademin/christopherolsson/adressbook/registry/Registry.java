@@ -28,7 +28,7 @@ public class Registry {
     }
 
     public List<Contact> search(String term) {
-        List<Contact> searchResults = null;
+        List<Contact> searchResults = new ArrayList<>();
         for (Contact contact : contactList) {
             if (contact.getFirstName().toLowerCase().startsWith(term.toLowerCase()) ||
                     (contact.getLastName().toLowerCase().startsWith(term.toLowerCase()))) {

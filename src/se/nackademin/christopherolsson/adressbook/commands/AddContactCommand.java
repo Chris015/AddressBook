@@ -34,17 +34,30 @@ public class AddContactCommand implements Command {
     }
 
     @Override
-    public void execute() {
-        if (validate())
+    public void execute(){
+        try {
+            if (validate())
+            {
+                registry.addContact(parameters.get(0),parameters.get(1),parameters.get(2));
+            }
+        } catch (InvalidCommandParameterException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private boolean validate() throws InvalidCommandParameterException
+    {
+        if (parameters.size() == 3) {
+            return true;
+        }
+        else
         {
-            registry.addContact(parameters.get(0),parameters.get(1),parameters.get(2));
+            throw new InvalidCommandParameterException("Invalid amounts of parameters for command: "+parameters.size());
         }
     }
 
-    private boolean validate()
-    {
-        return parameters.size() == 3;
-    }
+
 
 
 }

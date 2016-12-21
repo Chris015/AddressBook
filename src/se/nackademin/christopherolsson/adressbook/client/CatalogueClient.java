@@ -37,8 +37,7 @@ public class CatalogueClient {
     }
 
     public void sendRequest(String request) {
-        writer.println(request);
-        writer.flush();
+        writer.write(request);
     }
 
     public String waitForResponse(){
@@ -51,6 +50,10 @@ public class CatalogueClient {
                     response += line + "/";
                     System.out.println(response);
                 }
+<<<<<<< HEAD
+=======
+                response += line + "-";
+>>>>>>> ba29389b2f8188c7ede75132995198d60607b8f5
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -58,7 +61,7 @@ public class CatalogueClient {
         return response;
     }
 
-    public void disconnect() {
+    public void diconnect() {
         try {
             sendRequest("exit");
             this.clientSocket.close();
