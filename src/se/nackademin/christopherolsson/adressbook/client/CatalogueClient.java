@@ -42,13 +42,15 @@ public class CatalogueClient {
     }
 
     public String waitForResponse(){
-        String response = null;
+        String response = "";
         try {
             for (String line = reader.readLine(); line != null; line = reader.readLine()) {
                 if (line.equals("")) {
                     break;
+                } else {
+                    response += line + "/";
+                    System.out.println(response);
                 }
-                response += line + "/";
             }
         } catch (IOException e) {
             e.printStackTrace();
