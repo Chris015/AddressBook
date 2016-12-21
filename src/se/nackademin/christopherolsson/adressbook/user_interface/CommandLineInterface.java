@@ -25,9 +25,9 @@ public class CommandLineInterface implements InputHandler {
         registryPersister.load();
         AutoSave autoSave = new AutoSave(registryPersister);
         autoSave.autoSave();
-        CatalogueLoader catalogueLoader = new CatalogueLoader(remoteRegistry);
+        CatalogueLoader catalogueLoader = new CatalogueLoader(remoteRegistry, "localhost", "foobar");
         catalogueLoader.run();
-        interpreter = new CommandInterpreter(application, registryPersister, console, registry, remoteRegistry);
+        interpreter = new CommandInterpreter(this.application, registryPersister, console, registry, remoteRegistry);
         console.registerInputHandler(this);
         console.readInput();
     }
