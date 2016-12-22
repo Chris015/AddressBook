@@ -30,6 +30,15 @@ public class RemoteRegistry {
         return searchResults;
     }
 
+    public boolean contactIdExists(String id) {
+        for (Contact contact : remoteContactList) {
+            if(contact.getId().equals(id)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public List<Contact> getContacts() {
         return remoteContactList;
     }

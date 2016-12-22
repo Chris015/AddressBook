@@ -1,13 +1,11 @@
 package se.nackademin.christopherolsson.adressbook.commands;
 
 import se.nackademin.christopherolsson.adressbook.exceptions.InvalidCommandParameterException;
-import se.nackademin.christopherolsson.adressbook.registry.Contact;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
 import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author Christopher Olsson on 2016-12-20.
@@ -25,7 +23,7 @@ public class DeleteContactCommand implements Command {
     public DeleteContactCommand() {
     }
 
-    public DeleteContactCommand(ConsolePrinter consolePrinter, Registry registry,RemoteRegistry remoteRegistry, ArrayList<String> parameters) {
+    public DeleteContactCommand(ConsolePrinter consolePrinter, Registry registry, RemoteRegistry remoteRegistry, ArrayList<String> parameters) {
         this.consolePrinter = consolePrinter;
         this.registry = registry;
         this.remoteRegistry = remoteRegistry;
@@ -45,31 +43,18 @@ public class DeleteContactCommand implements Command {
     @Override
     public void execute() throws InvalidCommandParameterException {
         if (validate()) {
-            if(registry.getContacts().size() != 0) {
-                for (Contact contact : registry.getContacts()) {
-                    if (contact.getId().equals(parameters.get(0))) {
-                        consolePrinter.print(contact.getFirstName() + " was removed.");
-                    } else {
-                        consolePrinter.print("No contact with id " + parameters.get(0) + " found.");
-                        return;
-                    }
-                }
+            String id = parameters.get(0);
+
+            if (registry.contactIdExists(id)) {
+                registry.deleteContact(id);
+                consolePrinter.print("Contact was removed.");
+            } else if (remoteRegistry.contactIdExists(id)) {
+                consolePrinter.print("Can't delete a contact from a remote registry.");
             } else {
-                consolePrinter.print("Registry is empty.");
-                return;
+                consolePrinter.print("No contact with id " + id + " found.");
             }
-
-            registry.deleteContact(parameters.get(0));
-
-            for (Contact contact : remoteRegistry.getContacts()) {
-                if(contact.getId().equals(parameters.get(0))) {
-                    consolePrinter.print("Can't delete a contact from a remote registry.");
-                }
-            }
-
         }
     }
-
 
     private boolean validate() throws InvalidCommandParameterException {
         if (parameters.size() == 1) {

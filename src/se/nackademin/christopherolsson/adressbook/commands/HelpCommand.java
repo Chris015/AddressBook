@@ -1,7 +1,6 @@
 package se.nackademin.christopherolsson.adressbook.commands;
 
 import se.nackademin.christopherolsson.adressbook.exceptions.InvalidCommandParameterException;
-import se.nackademin.christopherolsson.adressbook.functions.CommandFormatter;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 import se.nackademin.christopherolsson.adressbook.user_interface.HelpMenu;
 
@@ -40,11 +39,15 @@ public class HelpCommand implements Command {
                 String menu = "";
                 List<Command> commands = helpMenu.getCommands();
                 for (Command command : commands) {
-                    menu += CommandFormatter.format(command);
+                    menu += format(command);
                 }
                 consolePrinter.print(menu);
             }
 
+    }
+
+    private static String format(Command command){
+        return String.format("%-10s%s\n", command.getName(), command.getDescription());
     }
 
     private boolean validate() throws InvalidCommandParameterException {

@@ -36,6 +36,15 @@ public class Registry {
         return searchResults;
     }
 
+    public boolean contactIdExists(String id) {
+        for (Contact contact : contactList) {
+            if(contact.getId().equals(id)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void load(List<Contact> contacts) {
         this.contactList.addAll(contacts);
     }
