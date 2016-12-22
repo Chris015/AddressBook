@@ -35,8 +35,7 @@ public class HelpCommand implements Command {
     }
 
     @Override
-    public void execute() {
-        try {
+    public void execute() throws InvalidCommandParameterException {
             if (validate()) {
                 String menu = "";
                 List<Command> commands = helpMenu.getCommands();
@@ -45,9 +44,7 @@ public class HelpCommand implements Command {
                 }
                 consolePrinter.print(menu);
             }
-        } catch (InvalidCommandParameterException e) {
-            e.printStackTrace();
-        }
+
     }
 
     private boolean validate() throws InvalidCommandParameterException {

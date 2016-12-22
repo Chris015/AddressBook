@@ -13,7 +13,7 @@ import se.nackademin.christopherolsson.adressbook.user_interface.CommandLineInte
 public class Application {
     private RemoteRegistry remoteRegistry = new RemoteRegistry();
     private Registry registry = new Registry();
-    private CatalogueLoader catalogueLoader = new CatalogueLoader(remoteRegistry, "localhost");
+    private CatalogueLoader catalogueLoader = new CatalogueLoader( remoteRegistry, "localhost");
     private RegistryPersister registryPersister = new RegistryPersister(registry);
     private AutoSave autoSave = new AutoSave(registryPersister);
 

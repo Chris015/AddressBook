@@ -1,9 +1,9 @@
 package se.nackademin.christopherolsson.adressbook.commands;
 
-import se.nackademin.christopherolsson.adressbook.registry.Contact;
 import se.nackademin.christopherolsson.adressbook.exceptions.InvalidCommandParameterException;
 import se.nackademin.christopherolsson.adressbook.functions.ContactFormatter;
 import se.nackademin.christopherolsson.adressbook.functions.ContactListSorter;
+import se.nackademin.christopherolsson.adressbook.registry.Contact;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
 import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * @author Christopher Olsson on 2016-12-20.
  */
-public class ListContactsCommand implements Command{
+public class ListContactsCommand implements Command {
 
     private String name = "list";
     private String description = "Lists contacts in registry";
@@ -24,7 +24,8 @@ public class ListContactsCommand implements Command{
     private RemoteRegistry remoteRegistry;
     private ArrayList<String> parameters;
 
-    public ListContactsCommand() {}
+    public ListContactsCommand() {
+    }
 
     public ListContactsCommand(ConsolePrinter consolePrinter, Registry registry, RemoteRegistry remoteRegistry, ArrayList<String> parameters) {
         this.consolePrinter = consolePrinter;
@@ -44,23 +45,24 @@ public class ListContactsCommand implements Command{
     }
 
     @Override
-    public void execute() {
-        try {
-            if(validate()) {
-                List<Contact> contactList = new ArrayList<>();
-                contactList.addAll(registry.getContacts());
-                contactList.addAll(remoteRegistry.getContacts());
-                contactList = ContactListSorter.sort(contactList);
+    public void execute() throws InvalidCommandParameterException {
+        if (validate()) {
+            List<Contact> contactList = new ArrayList<>();
+            contactList.addAll(registry.getContacts());
+            contactList.addAll(remoteRegistry.getContacts());
+            contactList = ContactListSorter.sort(contactList);
+            if (contactList.size() != 0) {
                 for (Contact contact : contactList) {
                     consolePrinter.print(ContactFormatter.format(contact));
                 }
             }
-        } catch (InvalidCommandParameterException e) {
-            e.printStackTrace();
+            else {
+                consolePrinter.print("Registry is empty.");
+            }
         }
     }
-    private boolean validate() throws InvalidCommandParameterException
-    {
+
+    private boolean validate() throws InvalidCommandParameterException {
         if (parameters.size() == 0) {
             return true;
         } else {

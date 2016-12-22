@@ -18,7 +18,8 @@ public class AddContactCommand implements Command {
     private Registry registry;
     private ArrayList<String> parameters;
 
-    public AddContactCommand() {}
+    public AddContactCommand() {
+    }
 
     public AddContactCommand(ConsolePrinter consolePrinter, Registry registry, ArrayList<String> parameters) {
         this.consolePrinter = consolePrinter;
@@ -37,15 +38,11 @@ public class AddContactCommand implements Command {
     }
 
     @Override
-    public void execute(){
-        try {
-            if (validate()) {
-                registry.addContact(parameters.get(0),parameters.get(1),parameters.get(2));
-            }
-        } catch (InvalidCommandParameterException e) {
-            consolePrinter.print(e.getMessage());
+    public void execute() throws InvalidCommandParameterException {
+        if (validate()) {
+            registry.addContact(parameters.get(0), parameters.get(1), parameters.get(2));
+            consolePrinter.print(parameters.get(0) + " was added!");
         }
-
     }
 
     private boolean validate() throws InvalidCommandParameterException {

@@ -10,7 +10,6 @@ public class Console implements ConsolePrinter {
 
     private InputHandler inputHandler;
 
-
     @Override
     public void print(String inputLine) {
         System.out.println(inputLine);

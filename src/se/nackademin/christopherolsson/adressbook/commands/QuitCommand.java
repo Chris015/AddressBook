@@ -22,7 +22,8 @@ public class QuitCommand implements Command {
     private ConsolePrinter consolePrinter;
     private List<String> parameters;
 
-    public QuitCommand() {}
+    public QuitCommand() {
+    }
 
     public QuitCommand(Application application, RegistryPersister registryPersister, ConsolePrinter consolePrinter, ArrayList<String> parameters) {
         this.application = application;
@@ -42,23 +43,19 @@ public class QuitCommand implements Command {
     }
 
     @Override
-    public void execute() {
-        try {
-            if (validate()) {
-                registryPersister.save();
-                consolePrinter.print("Goodbye!");
-                application.quit();
-            }
-        } catch (InvalidCommandParameterException e) {
-            consolePrinter.print(e.getMessage());
+    public void execute() throws InvalidCommandParameterException {
+        if (validate()) {
+            registryPersister.save();
+            consolePrinter.print("Goodbye!");
+            application.quit();
         }
     }
 
     private boolean validate() throws InvalidCommandParameterException {
-        if(parameters.size() == 0) {
+        if (parameters.size() == 0) {
             return true;
         }
-        throw new InvalidCommandParameterException("Help doesn't require any parameters");
+        throw new InvalidCommandParameterException(name +" doesn't require any parameters");
 
     }
 }

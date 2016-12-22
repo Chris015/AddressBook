@@ -1,7 +1,10 @@
 package se.nackademin.christopherolsson.adressbook.client;
 
 import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
+import se.nackademin.christopherolsson.adressbook.user_interface.Console;
+import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +18,7 @@ public class CatalogueLoader {
     private RemoteCatalogueFactory remoteCatalogueFactory = new RemoteCatalogueFactory(61616);
 
     private List<String> hosts = new ArrayList<>();
+    private ConsolePrinter consolePrinter = new Console();
 
     public CatalogueLoader(RemoteRegistry remoteRegistry, String...hostAddress) {
         this.remoteRegistry = remoteRegistry;
@@ -30,10 +34,17 @@ public class CatalogueLoader {
     public void run(){
         for (String host : hosts) {
             new Thread(() -> {
-                List<String> remoteContacts = remoteCatalogueFactory.create(host).getContacts();
-                for (int i = 0; i < remoteContacts.size(); i++) {
-                    String[] contactInfo = remoteContacts.get(i).split(" ");
-                    remoteRegistry.add(contactInfo[0], contactInfo[1], contactInfo[2], contactInfo[3]);
+                List<String> remoteContacts = null;
+                try {
+                    remoteContacts = remoteCatalogueFactory.create(host).getContacts();
+                } catch (IOException e) {
+                    consolePrinter.print("Couldn't connect to server with IP-address: " + host);
+                }
+                if (remoteContacts != null) {
+                    for (String remoteContact : remoteContacts) {
+                        String[] contactInfo = remoteContact.split(" ");
+                        remoteRegistry.add(contactInfo[0], contactInfo[1], contactInfo[2], contactInfo[3]);
+                    }
                 }
             }).start();
         }

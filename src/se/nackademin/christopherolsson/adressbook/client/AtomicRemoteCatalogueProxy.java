@@ -1,5 +1,6 @@
 package se.nackademin.christopherolsson.adressbook.client;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,12 +18,15 @@ public class AtomicRemoteCatalogueProxy implements RemoteCatalogueProxy {
         catalogueClient = new CatalogueClient(host, port);
     }
 
-    public List<String> getContacts(){
+    public List<String> getContacts() throws IOException {
         List<String> remoteContacts;
         catalogueClient.connect();
-        catalogueClient.sendRequest("getall");
-        remoteContacts = Arrays.asList(catalogueClient.waitForResponse().split("/"));
-        catalogueClient.disconnect();
-        return remoteContacts;
+        if(catalogueClient.isConnected()) {
+            catalogueClient.sendRequest("getall");
+            remoteContacts = Arrays.asList(catalogueClient.waitForResponse().split("/"));
+            catalogueClient.disconnect();
+            return remoteContacts;
+        }
+        return null;
     }
 }

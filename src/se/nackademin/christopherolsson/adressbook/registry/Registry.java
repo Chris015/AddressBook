@@ -20,6 +20,7 @@ public class Registry {
         for (int i = contactList.size() - 1; i >= 0; i--) {
             if (contactList.get(i).getId().equals(id)) {
                 contactList.remove(contactList.get(i));
+                return;
             }
         }
     }

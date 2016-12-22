@@ -1,9 +1,9 @@
 package se.nackademin.christopherolsson.adressbook.commands;
 
-import se.nackademin.christopherolsson.adressbook.registry.Contact;
 import se.nackademin.christopherolsson.adressbook.exceptions.InvalidCommandParameterException;
 import se.nackademin.christopherolsson.adressbook.functions.ContactFormatter;
 import se.nackademin.christopherolsson.adressbook.functions.ContactListSorter;
+import se.nackademin.christopherolsson.adressbook.registry.Contact;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
 import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * @author Christopher Olsson on 2016-12-21.
  */
-public class SearchContactsCommand implements Command{
+public class SearchContactsCommand implements Command {
     private String name = "search";
     private String description = "Searches after contacts";
 
@@ -24,7 +24,8 @@ public class SearchContactsCommand implements Command{
     private RemoteRegistry remoteRegistry;
     private List<String> parameters;
 
-    public SearchContactsCommand() {}
+    public SearchContactsCommand() {
+    }
 
     public SearchContactsCommand(ConsolePrinter consolePrinter, Registry registry, RemoteRegistry remoteRegistry, ArrayList<String> parameters) {
         this.consolePrinter = consolePrinter;
@@ -45,24 +46,24 @@ public class SearchContactsCommand implements Command{
     }
 
     @Override
-    public void execute() {
-        try {
-            if(validate()) {
-                List<Contact> contactList = new ArrayList<>();
-                contactList.addAll(registry.search(parameters.get(0)));
-                contactList.addAll(remoteRegistry.search(parameters.get(0)));
-                contactList = ContactListSorter.sort(contactList);
+    public void execute() throws InvalidCommandParameterException {
+        if (validate()) {
+            List<Contact> contactList = new ArrayList<>();
+            contactList.addAll(registry.search(parameters.get(0)));
+            contactList.addAll(remoteRegistry.search(parameters.get(0)));
+            contactList = ContactListSorter.sort(contactList);
+            if (contactList.size() != 0) {
                 for (Contact contact : contactList) {
                     consolePrinter.print(ContactFormatter.format(contact));
                 }
+            } else {
+                consolePrinter.print("Couldn't find a contact that is matching you search string.");
             }
-        } catch (InvalidCommandParameterException e) {
-            consolePrinter.print(e.getMessage()); //TODO get localized message?
         }
     }
 
     private boolean validate() throws InvalidCommandParameterException {
-        if(parameters.size() == 1) {
+        if (parameters.size() == 1) {
             return true;
         }
         throw new InvalidCommandParameterException(name + " only accepts one parameter. Got: " + parameters.size());

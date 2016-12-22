@@ -36,7 +36,7 @@ public class CommandInterpreter {
                 returnCommand = new AddContactCommand(consolePrinter, registry, commandLine.getParameters());
                 break;
             case "delete":
-                returnCommand = new DeleteContactCommand(consolePrinter, registry, commandLine.getParameters());
+                returnCommand = new DeleteContactCommand(consolePrinter, registry, remoteRegistry, commandLine.getParameters());
                 break;
             case "list":
                 returnCommand = new ListContactsCommand(consolePrinter, registry, remoteRegistry, commandLine.getParameters());
