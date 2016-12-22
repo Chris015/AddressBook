@@ -1,5 +1,6 @@
 package se.nackademin.christopherolsson.adressbook.commands;
 
+import se.nackademin.christopherolsson.adressbook.exceptions.InvalidCommandParameterException;
 import se.nackademin.christopherolsson.adressbook.functions.CommandFormatter;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 import se.nackademin.christopherolsson.adressbook.user_interface.HelpMenu;

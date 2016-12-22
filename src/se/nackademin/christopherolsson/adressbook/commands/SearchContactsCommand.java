@@ -1,6 +1,7 @@
 package se.nackademin.christopherolsson.adressbook.commands;
 
-import se.nackademin.christopherolsson.adressbook.Contact;
+import se.nackademin.christopherolsson.adressbook.registry.Contact;
+import se.nackademin.christopherolsson.adressbook.exceptions.InvalidCommandParameterException;
 import se.nackademin.christopherolsson.adressbook.functions.ContactFormatter;
 import se.nackademin.christopherolsson.adressbook.functions.ContactListSorter;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
@@ -45,19 +46,25 @@ public class SearchContactsCommand implements Command{
 
     @Override
     public void execute() {
-        //TODO: Log shit here
-        if(validate()) {
-            List<Contact> contactList = new ArrayList<>();
-            contactList.addAll(registry.search(parameters.get(0)));
-            contactList.addAll(remoteRegistry.search(parameters.get(0)));
-            contactList = ContactListSorter.sort(contactList);
-            for (Contact contact : contactList) {
-                consolePrinter.print(ContactFormatter.format(contact));
+        try {
+            if(validate()) {
+                List<Contact> contactList = new ArrayList<>();
+                contactList.addAll(registry.search(parameters.get(0)));
+                contactList.addAll(remoteRegistry.search(parameters.get(0)));
+                contactList = ContactListSorter.sort(contactList);
+                for (Contact contact : contactList) {
+                    consolePrinter.print(ContactFormatter.format(contact));
+                }
             }
+        } catch (InvalidCommandParameterException e) {
+            consolePrinter.print(e.getMessage()); //TODO get localized message?
         }
     }
 
-    private boolean validate() {
-        return parameters.size() == 1;
+    private boolean validate() throws InvalidCommandParameterException {
+        if(parameters.size() == 1) {
+            return true;
+        }
+        throw new InvalidCommandParameterException(name + " only accepts one parameter. Got: " + parameters.size());
     }
 }

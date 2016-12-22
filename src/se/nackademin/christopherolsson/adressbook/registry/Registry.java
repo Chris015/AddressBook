@@ -1,7 +1,5 @@
 package se.nackademin.christopherolsson.adressbook.registry;
 
-import se.nackademin.christopherolsson.adressbook.Contact;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;

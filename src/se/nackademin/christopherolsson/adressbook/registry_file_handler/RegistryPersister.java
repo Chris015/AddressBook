@@ -1,6 +1,6 @@
 package se.nackademin.christopherolsson.adressbook.registry_file_handler;
 
-import se.nackademin.christopherolsson.adressbook.Contact;
+import se.nackademin.christopherolsson.adressbook.registry.Contact;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
 
 import java.io.*;

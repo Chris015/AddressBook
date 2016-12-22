@@ -1,6 +1,7 @@
 package se.nackademin.christopherolsson.adressbook.commands;
 
 import se.nackademin.christopherolsson.adressbook.Application;
+import se.nackademin.christopherolsson.adressbook.exceptions.InvalidCommandParameterException;
 import se.nackademin.christopherolsson.adressbook.registry_file_handler.RegistryPersister;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 
@@ -42,14 +43,22 @@ public class QuitCommand implements Command {
 
     @Override
     public void execute() {
-        if (validate()) {
-            registryPersister.save();
-            consolePrinter.print("Goodbye!");
-            application.quit();
+        try {
+            if (validate()) {
+                registryPersister.save();
+                consolePrinter.print("Goodbye!");
+                application.quit();
+            }
+        } catch (InvalidCommandParameterException e) {
+            consolePrinter.print(e.getMessage());
         }
     }
 
-    private boolean validate() {
-        return parameters.size() == 0;
+    private boolean validate() throws InvalidCommandParameterException {
+        if(parameters.size() == 0) {
+            return true;
+        }
+        throw new InvalidCommandParameterException("Help doesn't require any parameters");
+
     }
 }

@@ -2,11 +2,10 @@ package se.nackademin.christopherolsson.adressbook.registry.remote_registry;
 
 
 
-import se.nackademin.christopherolsson.adressbook.Contact;
+import se.nackademin.christopherolsson.adressbook.registry.Contact;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 /**
  * Created by Robin Gk on 2016-12-20 as a school project.

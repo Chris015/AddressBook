@@ -1,4 +1,4 @@
-package se.nackademin.christopherolsson.adressbook.commands;
+package se.nackademin.christopherolsson.adressbook.exceptions;
 
 /**
  * Created by Fredrik Grimmenhag on 2016-12-21.

@@ -1,5 +1,6 @@
 package se.nackademin.christopherolsson.adressbook.commands;
 
+import se.nackademin.christopherolsson.adressbook.exceptions.InvalidCommandParameterException;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 
@@ -42,7 +43,7 @@ public class DeleteContactCommand implements Command {
                 registry.deleteContact(parameters.get(0));
             }
         } catch (InvalidCommandParameterException e) {
-            e.printStackTrace();
+            consolePrinter.print(e.getMessage());
         }
     }
 
@@ -50,7 +51,7 @@ public class DeleteContactCommand implements Command {
         if (parameters.size() == 1) {
             return true;
         } else {
-            throw new InvalidCommandParameterException("Invalid amounts of parameters for command: " + parameters.size());
+            throw new InvalidCommandParameterException(name + " only accepts one parameter. Got: " + parameters.size());
         }
     }
 

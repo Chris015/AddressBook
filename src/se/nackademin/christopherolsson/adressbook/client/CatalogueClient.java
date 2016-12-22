@@ -29,10 +29,11 @@ public class CatalogueClient {
             this.clientSocket = new Socket(host, port);
             writer = new PrintWriter(clientSocket.getOutputStream());
             reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-        } catch (UnknownHostException h){
+
+        } catch (UnknownHostException h) {
             System.out.println("Host with name: " + host + " on port: " + port + " could not be reached.");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -41,7 +42,7 @@ public class CatalogueClient {
         writer.flush();
     }
 
-    public String waitForResponse(){
+    public String waitForResponse() {
         String response = "";
         try {
             for (String line = reader.readLine(); line != null; line = reader.readLine()) {

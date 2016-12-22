@@ -1,6 +1,7 @@
 package se.nackademin.christopherolsson.adressbook.commands;
 
-import se.nackademin.christopherolsson.adressbook.Contact;
+import se.nackademin.christopherolsson.adressbook.registry.Contact;
+import se.nackademin.christopherolsson.adressbook.exceptions.InvalidCommandParameterException;
 import se.nackademin.christopherolsson.adressbook.functions.ContactFormatter;
 import se.nackademin.christopherolsson.adressbook.functions.ContactListSorter;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
@@ -63,7 +64,7 @@ public class ListContactsCommand implements Command{
         if (parameters.size() == 0) {
             return true;
         } else {
-            throw new InvalidCommandParameterException("Invalid amounts of parameters for command: " + parameters.size());
+            throw new InvalidCommandParameterException("Help doesn't require any parameters");
         }
     }
 }

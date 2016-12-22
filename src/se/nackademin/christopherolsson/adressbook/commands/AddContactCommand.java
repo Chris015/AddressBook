@@ -1,5 +1,6 @@
 package se.nackademin.christopherolsson.adressbook.commands;
 
+import se.nackademin.christopherolsson.adressbook.exceptions.InvalidCommandParameterException;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 
@@ -42,7 +43,7 @@ public class AddContactCommand implements Command {
                 registry.addContact(parameters.get(0),parameters.get(1),parameters.get(2));
             }
         } catch (InvalidCommandParameterException e) {
-            e.printStackTrace();
+            consolePrinter.print(e.getMessage());
         }
 
     }
@@ -51,11 +52,7 @@ public class AddContactCommand implements Command {
         if (parameters.size() == 3) {
             return true;
         } else {
-            throw new InvalidCommandParameterException("Invalid amounts of parameters for command: " + parameters.size());
+            throw new InvalidCommandParameterException(name + " only accepts one parameter. Got: " + parameters.size());
         }
     }
-
-
-
-
 }

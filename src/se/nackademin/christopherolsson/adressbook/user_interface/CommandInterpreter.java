@@ -2,6 +2,7 @@ package se.nackademin.christopherolsson.adressbook.user_interface;
 
 import se.nackademin.christopherolsson.adressbook.Application;
 import se.nackademin.christopherolsson.adressbook.commands.*;
+import se.nackademin.christopherolsson.adressbook.exceptions.UnknownCommandException;
 import se.nackademin.christopherolsson.adressbook.registry.Registry;
 import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.registry_file_handler.RegistryPersister;
@@ -24,7 +25,7 @@ public class CommandInterpreter {
         this.remoteRegistry = remoteRegistry;
     }
 
-    public Command interpret(CommandLine commandLine) {
+    public Command interpret(CommandLine commandLine) throws UnknownCommandException {
 
         String command = commandLine.getCommand();
 
@@ -50,8 +51,7 @@ public class CommandInterpreter {
                 returnCommand = new HelpCommand(consolePrinter, commandLine.getParameters());
                 break;
             default:
-                returnCommand = new UnknownCommand();
-                break;
+                throw new UnknownCommandException(command + " is not a valid command");
         }
 
         return returnCommand;
