@@ -18,9 +18,10 @@ public class CatalogueLoader {
     private RemoteCatalogueFactory remoteCatalogueFactory = new RemoteCatalogueFactory(61616);
 
     private List<String> hosts = new ArrayList<>();
-    private ConsolePrinter consolePrinter = new Console();
+    private ConsolePrinter consolePrinter;
 
-    public CatalogueLoader(RemoteRegistry remoteRegistry, String...hostAddress) {
+    public CatalogueLoader(ConsolePrinter consolePrinter, RemoteRegistry remoteRegistry, String...hostAddress) {
+        this.consolePrinter = consolePrinter;
         this.remoteRegistry = remoteRegistry;
         addHost(hostAddress);
     }

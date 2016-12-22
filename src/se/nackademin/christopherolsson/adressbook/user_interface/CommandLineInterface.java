@@ -12,13 +12,14 @@ import se.nackademin.christopherolsson.adressbook.registry_file_handler.Registry
  * Created by Fredrik Grimmenhag on 2016-12-20.
  */
 public class CommandLineInterface implements InputHandler {
-    private Console console = new Console();
+    private Console console;
     private CommandInterpreter interpreter;
 
 
-    public CommandLineInterface(Application application, RegistryPersister registryPersister, Registry registry,
+    public CommandLineInterface(Application application, Console console, RegistryPersister registryPersister, Registry registry,
                                 RemoteRegistry remoteRegistry) {
-        interpreter = new CommandInterpreter(application, registryPersister, console, registry, remoteRegistry);
+        this.console = console;
+        interpreter = new CommandInterpreter(application, registryPersister, this.console, registry, remoteRegistry);
         consoleSetup();
 
     }

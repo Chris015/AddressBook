@@ -15,8 +15,12 @@ public class HelpCommand implements Command {
     private String description = "Displays the help menu";
 
     private HelpMenu helpMenu = new HelpMenu();
-    ConsolePrinter consolePrinter;
+    private ConsolePrinter consolePrinter;
     private List<String> parameters;
+
+    public HelpCommand() {
+    }
+
 
     public HelpCommand(ConsolePrinter consolePrinter, List<String> parameters) {
         this.consolePrinter = consolePrinter;

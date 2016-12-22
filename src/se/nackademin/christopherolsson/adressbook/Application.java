@@ -6,6 +6,7 @@ import se.nackademin.christopherolsson.adressbook.registry.remote_registry.Remot
 import se.nackademin.christopherolsson.adressbook.registry_file_handler.AutoSave;
 import se.nackademin.christopherolsson.adressbook.registry_file_handler.RegistryPersister;
 import se.nackademin.christopherolsson.adressbook.user_interface.CommandLineInterface;
+import se.nackademin.christopherolsson.adressbook.user_interface.Console;
 
 /**
  * Created by Fredrik Grimmenhag on 2016-12-20.
@@ -13,7 +14,8 @@ import se.nackademin.christopherolsson.adressbook.user_interface.CommandLineInte
 public class Application {
     private RemoteRegistry remoteRegistry = new RemoteRegistry();
     private Registry registry = new Registry();
-    private CatalogueLoader catalogueLoader = new CatalogueLoader( remoteRegistry, "localhost");
+    private Console console = new Console();
+    private CatalogueLoader catalogueLoader = new CatalogueLoader(console, remoteRegistry, "localhost");
     private RegistryPersister registryPersister = new RegistryPersister(registry);
     private AutoSave autoSave = new AutoSave(registryPersister);
 
@@ -21,7 +23,7 @@ public class Application {
         catalogueLoader.run();
         registryPersister.load();
         autoSave.autoSave();
-        new CommandLineInterface(this, registryPersister, registry, remoteRegistry);
+        new CommandLineInterface(this, console,registryPersister, registry, remoteRegistry);
     }
 
     public void quit() {
