@@ -49,7 +49,7 @@ public class AddContactCommand implements Command {
         if (parameters.size() == 3) {
             return true;
         } else {
-            throw new InvalidCommandParameterException(name + " only accepts one parameter. Got: " + parameters.size());
+            throw new InvalidCommandParameterException(name + " only accepts three parameters. Got: " + parameters.size());
         }
     }
 }
