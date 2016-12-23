@@ -20,6 +20,7 @@ public class HelpMenu {
         commands.add(new DeleteContactCommand());
         commands.add(new ListContactsCommand());
         commands.add(new SearchContactsCommand());
+        commands.add(new HelpCommand());
         commands.add(new QuitCommand());
     }
 

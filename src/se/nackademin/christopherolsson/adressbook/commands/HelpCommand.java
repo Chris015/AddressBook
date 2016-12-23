@@ -11,10 +11,10 @@ import java.util.List;
  */
 public class HelpCommand implements Command {
 
-    private String name = "Help";
+    private String name = "help";
     private String description = "Displays the help menu";
 
-    private HelpMenu helpMenu = new HelpMenu();
+    private HelpMenu helpMenu;
     private ConsolePrinter consolePrinter;
     private List<String> parameters;
 
@@ -23,6 +23,7 @@ public class HelpCommand implements Command {
 
 
     public HelpCommand(ConsolePrinter consolePrinter, List<String> parameters) {
+        this.helpMenu = new HelpMenu();
         this.consolePrinter = consolePrinter;
         this.parameters = parameters;
     }
