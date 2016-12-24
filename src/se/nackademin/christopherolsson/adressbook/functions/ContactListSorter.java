@@ -1,6 +1,6 @@
 package se.nackademin.christopherolsson.adressbook.functions;
 
-import se.nackademin.christopherolsson.adressbook.registry.Contact;
+import se.nackademin.christopherolsson.adressbook.registries.Contact;
 
 import java.util.List;
 

@@ -4,8 +4,8 @@ import se.nackademin.christopherolsson.adressbook.Application;
 import se.nackademin.christopherolsson.adressbook.commands.Command;
 import se.nackademin.christopherolsson.adressbook.exceptions.InvalidCommandParameterException;
 import se.nackademin.christopherolsson.adressbook.exceptions.UnknownCommandException;
-import se.nackademin.christopherolsson.adressbook.registry.Registry;
-import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
+import se.nackademin.christopherolsson.adressbook.registries.registry.Registry;
+import se.nackademin.christopherolsson.adressbook.registries.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.registry_file_handler.RegistryPersister;
 
 /**
@@ -26,7 +26,7 @@ public class CommandLineInterface implements InputHandler {
 
     private void consoleSetup() {
         console.registerInputHandler(this);
-        console.print("Welcome\n");
+        console.print("Welcome!\n");
         console.readInput();
     }
 

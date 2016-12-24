@@ -1,8 +1,8 @@
 package se.nackademin.christopherolsson.adressbook;
 
 import se.nackademin.christopherolsson.adressbook.client.CatalogueLoader;
-import se.nackademin.christopherolsson.adressbook.registry.Registry;
-import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
+import se.nackademin.christopherolsson.adressbook.registries.registry.Registry;
+import se.nackademin.christopherolsson.adressbook.registries.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.registry_file_handler.AutoSave;
 import se.nackademin.christopherolsson.adressbook.registry_file_handler.RegistryPersister;
 import se.nackademin.christopherolsson.adressbook.user_interface.CommandLineInterface;

@@ -1,6 +1,6 @@
 package se.nackademin.christopherolsson.adressbook.client;
 
-import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
+import se.nackademin.christopherolsson.adressbook.registries.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 
 import java.io.IOException;

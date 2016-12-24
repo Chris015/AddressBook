@@ -1,7 +1,7 @@
-package se.nackademin.christopherolsson.adressbook.registry.remote_registry;
+package se.nackademin.christopherolsson.adressbook.registries.remote_registry;
 
 
-import se.nackademin.christopherolsson.adressbook.registry.Contact;
+import se.nackademin.christopherolsson.adressbook.registries.Contact;
 
 import java.util.ArrayList;
 import java.util.List;

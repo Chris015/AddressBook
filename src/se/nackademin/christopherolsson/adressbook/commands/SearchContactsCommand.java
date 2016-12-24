@@ -3,9 +3,9 @@ package se.nackademin.christopherolsson.adressbook.commands;
 import se.nackademin.christopherolsson.adressbook.exceptions.InvalidCommandParameterException;
 import se.nackademin.christopherolsson.adressbook.functions.ContactFormatter;
 import se.nackademin.christopherolsson.adressbook.functions.ContactListSorter;
-import se.nackademin.christopherolsson.adressbook.registry.Contact;
-import se.nackademin.christopherolsson.adressbook.registry.Registry;
-import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
+import se.nackademin.christopherolsson.adressbook.registries.Contact;
+import se.nackademin.christopherolsson.adressbook.registries.registry.Registry;
+import se.nackademin.christopherolsson.adressbook.registries.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 
 import java.util.ArrayList;
@@ -57,7 +57,7 @@ public class SearchContactsCommand implements Command {
                     consolePrinter.print(ContactFormatter.format(contact));
                 }
             } else {
-                consolePrinter.print("Couldn't find a contact that is matching you search string.");
+                consolePrinter.print("Couldn't find a contact that is matching you search string.\n");
             }
         }
     }

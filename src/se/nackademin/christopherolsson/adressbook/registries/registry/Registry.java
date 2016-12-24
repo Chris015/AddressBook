@@ -1,4 +1,6 @@
-package se.nackademin.christopherolsson.adressbook.registry;
+package se.nackademin.christopherolsson.adressbook.registries.registry;
+
+import se.nackademin.christopherolsson.adressbook.registries.Contact;
 
 import java.util.ArrayList;
 import java.util.List;

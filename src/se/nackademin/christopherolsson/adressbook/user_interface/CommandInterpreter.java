@@ -3,8 +3,8 @@ package se.nackademin.christopherolsson.adressbook.user_interface;
 import se.nackademin.christopherolsson.adressbook.Application;
 import se.nackademin.christopherolsson.adressbook.commands.*;
 import se.nackademin.christopherolsson.adressbook.exceptions.UnknownCommandException;
-import se.nackademin.christopherolsson.adressbook.registry.Registry;
-import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
+import se.nackademin.christopherolsson.adressbook.registries.registry.Registry;
+import se.nackademin.christopherolsson.adressbook.registries.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.registry_file_handler.RegistryPersister;
 
 /**

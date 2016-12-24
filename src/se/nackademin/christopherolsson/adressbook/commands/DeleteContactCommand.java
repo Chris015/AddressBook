@@ -1,8 +1,8 @@
 package se.nackademin.christopherolsson.adressbook.commands;
 
 import se.nackademin.christopherolsson.adressbook.exceptions.InvalidCommandParameterException;
-import se.nackademin.christopherolsson.adressbook.registry.Registry;
-import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
+import se.nackademin.christopherolsson.adressbook.registries.registry.Registry;
+import se.nackademin.christopherolsson.adressbook.registries.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class DeleteContactCommand implements Command {
 
     private String name = "delete";
-    private String description = "Removes a contact from the registry";
+    private String description = "Removes a contact from the registries";
 
     private ConsolePrinter consolePrinter;
     private Registry registry;
@@ -49,7 +49,7 @@ public class DeleteContactCommand implements Command {
                 registry.deleteContact(id);
                 consolePrinter.print("Contact was removed.");
             } else if (remoteRegistry.contactIdExists(id)) {
-                consolePrinter.print("Can't delete a contact from a remote registry.");
+                consolePrinter.print("Can't delete a contact from a remote registries.");
             } else {
                 consolePrinter.print("No contact with id " + id + " found.");
             }

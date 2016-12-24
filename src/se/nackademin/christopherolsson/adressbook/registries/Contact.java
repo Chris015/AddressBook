@@ -1,4 +1,4 @@
-package se.nackademin.christopherolsson.adressbook.registry;
+package se.nackademin.christopherolsson.adressbook.registries;
 
 
 public interface Contact {

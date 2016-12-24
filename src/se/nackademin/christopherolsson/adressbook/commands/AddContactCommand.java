@@ -1,7 +1,7 @@
 package se.nackademin.christopherolsson.adressbook.commands;
 
 import se.nackademin.christopherolsson.adressbook.exceptions.InvalidCommandParameterException;
-import se.nackademin.christopherolsson.adressbook.registry.Registry;
+import se.nackademin.christopherolsson.adressbook.registries.registry.Registry;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class AddContactCommand implements Command {
 
     private String name = "add";
-    private String description = "Adds a contact to the registry";
+    private String description = "Adds a contact to the registries";
 
     private ConsolePrinter consolePrinter;
     private Registry registry;
