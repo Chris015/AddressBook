@@ -1,7 +1,6 @@
 package se.nackademin.christopherolsson.adressbook.registry.remote_registry;
 
 
-
 import se.nackademin.christopherolsson.adressbook.registry.Contact;
 
 import java.util.ArrayList;
@@ -13,7 +12,7 @@ import java.util.List;
  */
 public class RemoteRegistry {
 
-   private List<Contact> remoteContactList = new ArrayList<>();
+    private List<Contact> remoteContactList = new ArrayList<>();
 
     public void add(String id, String firstName, String lastName, String eMailAddress) {
         remoteContactList.add(new RemoteContact(id, firstName, lastName, eMailAddress));
@@ -32,7 +31,7 @@ public class RemoteRegistry {
 
     public boolean contactIdExists(String id) {
         for (Contact contact : remoteContactList) {
-            if(contact.getId().equals(id)) {
+            if (contact.getId().equals(id)) {
                 return true;
             }
         }

@@ -55,8 +55,7 @@ public class ListContactsCommand implements Command {
                 for (Contact contact : contactList) {
                     consolePrinter.print(ContactFormatter.format(contact));
                 }
-            }
-            else {
+            } else {
                 consolePrinter.print("Registry is empty.");
             }
         }
@@ -66,7 +65,7 @@ public class ListContactsCommand implements Command {
         if (parameters.size() == 0) {
             return true;
         } else {
-            throw new InvalidCommandParameterException("Help doesn't require any parameters");
+            throw new InvalidCommandParameterException(name + " doesn't require any parameters\n");
         }
     }
 }

@@ -15,8 +15,7 @@ public class CommandLine {
         this.parameters = parameters;
     }
 
-    static CommandLine parse(String inputCommand)
-    {
+    static CommandLine parse(String inputCommand) {
         String input = inputCommand;
         input = input.trim().replaceAll(" +", " ");
         String[] inputParts = input.split(" ");
@@ -24,8 +23,7 @@ public class CommandLine {
         String command = inputParts[0];
 
         ArrayList<String> parameters = new ArrayList<>();
-        for (int i = 1; i < inputParts.length; i++)
-        {
+        for (int i = 1; i < inputParts.length; i++) {
             parameters.add(inputParts[i]);
         }
 

@@ -55,7 +55,7 @@ public class QuitCommand implements Command {
         if (parameters.size() == 0) {
             return true;
         }
-        throw new InvalidCommandParameterException(name +" doesn't require any parameters");
+        throw new InvalidCommandParameterException(name + " doesn't require any parameters\n");
 
     }
 }

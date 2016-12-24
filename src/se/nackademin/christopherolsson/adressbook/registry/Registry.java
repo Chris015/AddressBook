@@ -38,7 +38,7 @@ public class Registry {
 
     public boolean contactIdExists(String id) {
         for (Contact contact : contactList) {
-            if(contact.getId().equals(id)) {
+            if (contact.getId().equals(id)) {
                 return true;
             }
         }

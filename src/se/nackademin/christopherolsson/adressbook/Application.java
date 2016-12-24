@@ -23,7 +23,7 @@ public class Application {
         catalogueLoader.run();
         registryPersister.load();
         autoSave.autoSave();
-        new CommandLineInterface(this, console,registryPersister, registry, remoteRegistry);
+        new CommandLineInterface(this, console, registryPersister, registry, remoteRegistry);
     }
 
     public void quit() {

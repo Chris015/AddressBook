@@ -66,6 +66,6 @@ public class SearchContactsCommand implements Command {
         if (parameters.size() == 1) {
             return true;
         }
-        throw new InvalidCommandParameterException(name + " only accepts one parameter. Got: " + parameters.size());
+        throw new InvalidCommandParameterException(name + " only accepts one parameter. Got: \n" + parameters.size());
     }
 }

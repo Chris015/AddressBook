@@ -7,6 +7,8 @@ import se.nackademin.christopherolsson.adressbook.exceptions.InvalidCommandParam
  */
 public interface Command {
     String getName();
+
     String getDescription();
+
     void execute() throws InvalidCommandParameterException;
 }

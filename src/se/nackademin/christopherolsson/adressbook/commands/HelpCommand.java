@@ -40,18 +40,18 @@ public class HelpCommand implements Command {
 
     @Override
     public void execute() throws InvalidCommandParameterException {
-            if (validate()) {
-                String menu = "";
-                List<Command> commands = helpMenu.getCommands();
-                for (Command command : commands) {
-                    menu += format(command);
-                }
-                consolePrinter.print(menu);
+        if (validate()) {
+            String menu = "";
+            List<Command> commands = helpMenu.getCommands();
+            for (Command command : commands) {
+                menu += format(command);
             }
+            consolePrinter.print(menu);
+        }
 
     }
 
-    private static String format(Command command){
+    private static String format(Command command) {
         return String.format("%-10s%s\n", command.getName(), command.getDescription());
     }
 
@@ -59,7 +59,7 @@ public class HelpCommand implements Command {
         if (parameters.size() == 0) {
             return true;
         } else {
-            throw new InvalidCommandParameterException("Help doesn't require any parameters");
+            throw new InvalidCommandParameterException(name + " doesn't require any parameters\n");
         }
 
     }

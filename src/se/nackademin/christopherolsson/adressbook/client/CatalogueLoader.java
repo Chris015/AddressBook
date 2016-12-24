@@ -1,7 +1,6 @@
 package se.nackademin.christopherolsson.adressbook.client;
 
 import se.nackademin.christopherolsson.adressbook.registry.remote_registry.RemoteRegistry;
-import se.nackademin.christopherolsson.adressbook.user_interface.Console;
 import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 
 import java.io.IOException;
@@ -20,7 +19,7 @@ public class CatalogueLoader {
     private List<String> hosts = new ArrayList<>();
     private ConsolePrinter consolePrinter;
 
-    public CatalogueLoader(ConsolePrinter consolePrinter, RemoteRegistry remoteRegistry, String...hostAddress) {
+    public CatalogueLoader(ConsolePrinter consolePrinter, RemoteRegistry remoteRegistry, String... hostAddress) {
         this.consolePrinter = consolePrinter;
         this.remoteRegistry = remoteRegistry;
         addHost(hostAddress);
@@ -32,7 +31,7 @@ public class CatalogueLoader {
         }
     }
 
-    public void run(){
+    public void run() {
         for (String host : hosts) {
             new Thread(() -> {
                 List<String> remoteContacts = null;

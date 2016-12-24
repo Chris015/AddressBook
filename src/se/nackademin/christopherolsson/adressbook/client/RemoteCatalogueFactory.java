@@ -11,7 +11,7 @@ public class RemoteCatalogueFactory {
         this.defaultPort = port;
     }
 
-    public RemoteCatalogueProxy create(String host){
+    public RemoteCatalogueProxy create(String host) {
 
         return new AtomicRemoteCatalogueProxy(host, this.defaultPort);
     }
