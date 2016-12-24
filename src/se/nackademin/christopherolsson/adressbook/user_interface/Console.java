@@ -19,7 +19,7 @@ public class Console implements ConsolePrinter {
         this.inputHandler = inputHandler;
     }
 
-    void readInput() {
+    public void readInput() {
         while (true) {
             Scanner consoleReader = new Scanner(System.in);
             String input = consoleReader.nextLine();
@@ -27,5 +27,4 @@ public class Console implements ConsolePrinter {
         }
 
     }
-
 }

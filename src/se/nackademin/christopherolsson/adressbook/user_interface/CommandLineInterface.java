@@ -26,6 +26,7 @@ public class CommandLineInterface implements InputHandler {
 
     private void consoleSetup() {
         console.registerInputHandler(this);
+        console.print("Welcome\n");
         console.readInput();
     }
 
