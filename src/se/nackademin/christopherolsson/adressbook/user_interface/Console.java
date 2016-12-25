@@ -2,11 +2,13 @@ package se.nackademin.christopherolsson.adressbook.user_interface;
 
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 /**
  * Created by Fredrik Grimmenhag on 2016-12-20.
  */
 public class Console implements ConsolePrinter {
+    private final static Logger log = Logger.getLogger(Console.class.getName());
 
     private InputHandler inputHandler;
 
@@ -23,6 +25,7 @@ public class Console implements ConsolePrinter {
         while (true) {
             Scanner consoleReader = new Scanner(System.in);
             String input = consoleReader.nextLine();
+            log.fine("User input: " + input);
             inputHandler.handle(CommandLine.parse(input));
         }
 

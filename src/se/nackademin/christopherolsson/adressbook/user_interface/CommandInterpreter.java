@@ -28,7 +28,6 @@ public class CommandInterpreter {
     public Command interpret(CommandLine commandLine) throws UnknownCommandException {
 
         String command = commandLine.getCommand();
-
         Command returnCommand;
 
         switch (command) {
