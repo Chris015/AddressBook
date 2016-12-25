@@ -1,5 +1,0 @@
-2016-12-25 13:22:30 INFO   se.nackademin.christopherolsson.adressbook.Application start - Program started
-2016-12-25 13:22:36 FINE   se.nackademin.christopherolsson.adressbook.user_interface.Console readInput - User input: help
-2016-12-25 13:22:38 FINE   se.nackademin.christopherolsson.adressbook.user_interface.Console readInput - User input: wuit
-2016-12-25 13:22:41 FINE   se.nackademin.christopherolsson.adressbook.user_interface.Console readInput - User input: quit
-2016-12-25 13:22:41 INFO   se.nackademin.christopherolsson.adressbook.Application quit - Program terminated
