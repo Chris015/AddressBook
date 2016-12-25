@@ -3,6 +3,7 @@ package se.nackademin.christopherolsson.adressbook;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 /**
  * @author Christopher Olsson on 2016-12-21.
