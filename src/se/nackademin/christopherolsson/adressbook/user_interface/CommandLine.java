@@ -2,9 +2,6 @@ package se.nackademin.christopherolsson.adressbook.user_interface;
 
 import java.util.ArrayList;
 
-/**
- * Created by Fredrik Grimmenhag on 2016-12-20.
- */
 public class CommandLine {
 
     private String command;

@@ -1,6 +1,5 @@
 package se.nackademin.christopherolsson.adressbook.registries;
 
-
 public interface Contact {
     String getId();
 

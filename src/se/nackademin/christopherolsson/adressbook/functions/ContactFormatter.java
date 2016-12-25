@@ -2,9 +2,6 @@ package se.nackademin.christopherolsson.adressbook.functions;
 
 import se.nackademin.christopherolsson.adressbook.registries.Contact;
 
-/**
- * @author Christopher Olsson on 2016-12-21.
- */
 public class ContactFormatter {
 
     public static String format(Contact contact) {

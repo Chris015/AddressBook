@@ -8,10 +8,6 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- * Created by Robin Gk on 2016-12-20 as a school project.
- * email kallrobin92@gmail.com
- */
 public class RegistryPersister {
     private final static Logger log = Logger.getLogger(RegistryPersister.class.getName());
     private File file = new File("contactRegister.txt");

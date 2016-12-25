@@ -6,10 +6,6 @@ import se.nackademin.christopherolsson.adressbook.registries.ContactDetails;
 import java.io.Serializable;
 import java.util.UUID;
 
-/**
- * Created by Robin Gk on 2016-12-20 as a school project.
- * email kallrobin92@gmail.com
- */
 public class LocalContact implements Contact, Serializable {
     private final UUID id;
     private ContactDetails contactDetails;

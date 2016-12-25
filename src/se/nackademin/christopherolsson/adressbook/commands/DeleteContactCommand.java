@@ -8,9 +8,6 @@ import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
-/**
- * @author Christopher Olsson on 2016-12-20.
- */
 public class DeleteContactCommand implements Command {
     private final static Logger log = Logger.getLogger(DeleteContactCommand.class.getName());
     private String name = "delete";

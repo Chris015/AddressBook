@@ -5,9 +5,6 @@ import se.nackademin.christopherolsson.adressbook.commands.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Christopher Olsson on 2016-12-21.
- */
 public class HelpMenu {
     private List<Command> commands = new ArrayList<>();
 

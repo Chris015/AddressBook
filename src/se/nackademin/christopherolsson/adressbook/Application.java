@@ -10,9 +10,6 @@ import se.nackademin.christopherolsson.adressbook.user_interface.Console;
 
 import java.util.logging.Logger;
 
-/**
- * Created by Fredrik Grimmenhag on 2016-12-20.
- */
 public class Application {
     private final static Logger log = Logger.getLogger(Application.class.getName());
     private RemoteRegistry remoteRegistry = new RemoteRegistry();

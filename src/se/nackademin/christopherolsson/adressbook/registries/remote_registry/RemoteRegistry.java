@@ -6,10 +6,6 @@ import se.nackademin.christopherolsson.adressbook.registries.Contact;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Robin Gk on 2016-12-20 as a school project.
- * email kallrobin92@gmail.com
- */
 public class RemoteRegistry {
 
     private List<Contact> remoteContactList = new ArrayList<>();

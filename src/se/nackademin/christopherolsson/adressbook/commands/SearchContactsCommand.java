@@ -12,10 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-
-/**
- * @author Christopher Olsson on 2016-12-21.
- */
 public class SearchContactsCommand implements Command {
     private final static Logger log = Logger.getLogger(SearchContactsCommand.class.getName());
     private String name = "search";

@@ -3,10 +3,6 @@ package se.nackademin.christopherolsson.adressbook.registry_file_handler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- * Created by Robin Gk on 2016-12-20 as a school project.
- * email kallrobin92@gmail.com
- */
 public class AutoSave {
     private final static Logger log = Logger.getLogger(AutoSave.class.getName());
     private RegistryPersister registryPersister;

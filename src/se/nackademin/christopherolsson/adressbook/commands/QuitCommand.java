@@ -9,10 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-/**
- * Created by Robin Gk on 2016-12-21 as a school project.
- * email kallrobin92@gmail.com
- */
 public class QuitCommand implements Command {
     private final static Logger log = Logger.getLogger(QuitCommand.class.getName());
     private String name = "quit";

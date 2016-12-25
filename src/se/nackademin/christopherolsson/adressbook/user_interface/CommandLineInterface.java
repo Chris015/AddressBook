@@ -11,9 +11,6 @@ import se.nackademin.christopherolsson.adressbook.registry_file_handler.Registry
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- * Created by Fredrik Grimmenhag on 2016-12-20.
- */
 public class CommandLineInterface implements InputHandler {
     private final static Logger log = Logger.getLogger(CommandLineInterface.class.getName());
     private Console console;

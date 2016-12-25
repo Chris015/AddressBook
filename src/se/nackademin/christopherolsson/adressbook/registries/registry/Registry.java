@@ -6,10 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-/**
- * Created by Robin Gk on 2016-12-20 as a school project.
- * email kallrobin92@gmail.com
- */
 public class Registry {
     private List<Contact> contactList = new ArrayList<>();
 

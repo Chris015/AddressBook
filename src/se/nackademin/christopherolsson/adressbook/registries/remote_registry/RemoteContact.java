@@ -3,10 +3,6 @@ package se.nackademin.christopherolsson.adressbook.registries.remote_registry;
 import se.nackademin.christopherolsson.adressbook.registries.Contact;
 import se.nackademin.christopherolsson.adressbook.registries.ContactDetails;
 
-/**
- * Created by Robin Gk on 2016-12-20 as a school project.
- * email kallrobin92@gmail.com
- */
 public class RemoteContact implements Contact {
     private String id;
     private ContactDetails contactDetails;

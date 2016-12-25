@@ -7,9 +7,6 @@ import se.nackademin.christopherolsson.adressbook.registries.registry.Registry;
 import se.nackademin.christopherolsson.adressbook.registries.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.registry_file_handler.RegistryPersister;
 
-/**
- * @author Christopher Olsson on 2016-12-20.
- */
 public class CommandInterpreter {
     private Application application;
     private RegistryPersister registryPersister;

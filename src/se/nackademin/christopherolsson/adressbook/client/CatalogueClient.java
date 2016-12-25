@@ -8,10 +8,6 @@ import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- * Created by Robin Gk on 2016-12-20 as a school project.
- * email kallrobin92@gmail.com
- */
 public class CatalogueClient {
     private final static Logger log = Logger.getLogger(CatalogueClient.class.getName());
     private String host;
