@@ -8,10 +8,13 @@ import se.nackademin.christopherolsson.adressbook.registry_file_handler.Registry
 import se.nackademin.christopherolsson.adressbook.user_interface.CommandLineInterface;
 import se.nackademin.christopherolsson.adressbook.user_interface.Console;
 
+import java.util.logging.Logger;
+
 /**
  * Created by Fredrik Grimmenhag on 2016-12-20.
  */
 public class Application {
+    private final static Logger log = Logger.getLogger(Application.class.getName());
     private RemoteRegistry remoteRegistry = new RemoteRegistry();
     private Registry registry = new Registry();
     private Console console = new Console();
@@ -20,6 +23,7 @@ public class Application {
     private AutoSave autoSave = new AutoSave(registryPersister);
 
     public void start() {
+        log.info("Program started");
         catalogueLoader.run();
         registryPersister.load();
         autoSave.autoSave();
@@ -27,6 +31,7 @@ public class Application {
     }
 
     public void quit() {
+        log.info("Program terminated");
         System.exit(0);
     }
 }
