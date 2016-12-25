@@ -8,10 +8,14 @@ import se.nackademin.christopherolsson.adressbook.registries.registry.Registry;
 import se.nackademin.christopherolsson.adressbook.registries.remote_registry.RemoteRegistry;
 import se.nackademin.christopherolsson.adressbook.registry_file_handler.RegistryPersister;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * Created by Fredrik Grimmenhag on 2016-12-20.
  */
 public class CommandLineInterface implements InputHandler {
+    private final static Logger log = Logger.getLogger(CommandLineInterface.class.getName());
     private Console console;
     private CommandInterpreter interpreter;
 
@@ -37,6 +41,9 @@ public class CommandLineInterface implements InputHandler {
             command.execute();
         } catch (UnknownCommandException | InvalidCommandParameterException e) {
             console.print(e.getMessage());
+            log.log(Level.WARNING, "Something wrong occurred", e);
+        } catch (Exception e) {
+            log.log(Level.SEVERE, "Something wrong occurred", e);
         }
     }
 }

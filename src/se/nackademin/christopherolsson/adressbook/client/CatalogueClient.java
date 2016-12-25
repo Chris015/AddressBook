@@ -5,13 +5,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by Robin Gk on 2016-12-20 as a school project.
  * email kallrobin92@gmail.com
  */
 public class CatalogueClient {
-
+    private final static Logger log = Logger.getLogger(CatalogueClient.class.getName());
     private String host;
     private int port;
     private Socket clientSocket;
@@ -52,7 +54,7 @@ public class CatalogueClient {
             sendRequest("exit");
             closeResources();
         } catch (IOException e) {
-            e.printStackTrace();
+            log.log(Level.SEVERE, "Something wrong occurred", e);
         }
     }
 

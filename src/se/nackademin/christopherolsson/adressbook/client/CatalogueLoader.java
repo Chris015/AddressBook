@@ -6,13 +6,15 @@ import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by Robin Gk on 2016-12-20 as a school project.
  * email kallrobin92@gmail.com
  */
 public class CatalogueLoader {
-
+    private final static Logger log = Logger.getLogger(CatalogueLoader.class.getName());
     private RemoteRegistry remoteRegistry;
     private RemoteCatalogueFactory remoteCatalogueFactory = new RemoteCatalogueFactory(61616);
 
@@ -39,6 +41,9 @@ public class CatalogueLoader {
                     remoteContacts = remoteCatalogueFactory.create(host).getContacts();
                 } catch (IOException e) {
                     consolePrinter.print("Couldn't connect to server with IP-address: " + host);
+                    log.log(Level.WARNING, "Something wrong occurred", e);
+                } catch (Exception e) {
+                    log.log(Level.SEVERE, "Something wrong occurred", e);
                 }
                 if (remoteContacts != null) {
                     for (String remoteContact : remoteContacts) {

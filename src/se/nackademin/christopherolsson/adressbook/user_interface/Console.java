@@ -9,7 +9,6 @@ import java.util.logging.Logger;
  */
 public class Console implements ConsolePrinter {
     private final static Logger log = Logger.getLogger(Console.class.getName());
-
     private InputHandler inputHandler;
 
     @Override
