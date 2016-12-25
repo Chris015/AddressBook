@@ -23,7 +23,7 @@ public class Application {
     private AutoSave autoSave = new AutoSave(registryPersister);
 
     public void start() {
-        log.info("Program started");
+        log.info("Program started.");
         catalogueLoader.run();
         registryPersister.load();
         autoSave.autoSave();
@@ -31,7 +31,7 @@ public class Application {
     }
 
     public void quit() {
-        log.info("Program terminated");
+        log.info("Program terminated.");
         System.exit(0);
     }
 }

@@ -21,10 +21,12 @@ public class AutoSave {
             while (true) {
                 try {
                     Thread.sleep(5_000);
+                    log.info("Auto save started...");
+                    registryPersister.save();
+                    log.info("Auto save finished!");
                 } catch (InterruptedException e) {
                     log.log(Level.SEVERE, "Something wrong occurred", e);
                 }
-                registryPersister.save();
             }
         }).start();
     }

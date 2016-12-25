@@ -10,12 +10,14 @@ import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 
 /**
  * @author Christopher Olsson on 2016-12-21.
  */
 public class SearchContactsCommand implements Command {
+    private final static Logger log = Logger.getLogger(SearchContactsCommand.class.getName());
     private String name = "search";
     private String description = "Searches after contacts";
 
@@ -48,6 +50,7 @@ public class SearchContactsCommand implements Command {
     @Override
     public void execute() throws InvalidCommandParameterException {
         if (validate()) {
+            log.info("Searching for contacts...");
             List<Contact> contactList = new ArrayList<>();
             contactList.addAll(registry.search(parameters.get(0)));
             contactList.addAll(remoteRegistry.search(parameters.get(0)));
@@ -56,8 +59,11 @@ public class SearchContactsCommand implements Command {
                 for (Contact contact : contactList) {
                     consolePrinter.print(ContactFormatter.format(contact));
                 }
+                log.info("Successfully searched for contacts.");
             } else {
                 consolePrinter.print("Couldn't find a contact that is matching you search string.\n");
+                log.info("Failed searching for contacts. " +
+                        "Couldn't find a contact that is matching you search string.");
             }
         }
     }

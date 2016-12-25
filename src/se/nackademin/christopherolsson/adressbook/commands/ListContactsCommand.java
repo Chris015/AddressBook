@@ -10,12 +10,13 @@ import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * @author Christopher Olsson on 2016-12-20.
  */
 public class ListContactsCommand implements Command {
-
+    private final static Logger log = Logger.getLogger(ListContactsCommand.class.getName());
     private String name = "list";
     private String description = "Lists contacts in registries";
 
@@ -47,6 +48,7 @@ public class ListContactsCommand implements Command {
     @Override
     public void execute() throws InvalidCommandParameterException {
         if (validate()) {
+            log.info("Listing contacts...");
             List<Contact> contactList = new ArrayList<>();
             contactList.addAll(registry.getContacts());
             contactList.addAll(remoteRegistry.getContacts());
@@ -55,8 +57,10 @@ public class ListContactsCommand implements Command {
                 for (Contact contact : contactList) {
                     consolePrinter.print(ContactFormatter.format(contact));
                 }
+                log.info("Successfully listed the contacts.");
             } else {
                 consolePrinter.print("Registry is empty.\n");
+                log.info("Failed listing the contacts. Registry is empty.");
             }
         }
     }

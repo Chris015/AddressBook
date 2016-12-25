@@ -26,7 +26,9 @@ public class RegistryPersister {
         if (file.isFile()) {
             try (FileInputStream fis = new FileInputStream(file);
                  ObjectInputStream ois = new ObjectInputStream(fis)) {
+                log.info("Loading...");
                 registry.load((List<Contact>) ois.readObject());
+                log.info("Finished loading!");
             } catch (IOException | ClassNotFoundException e) {
                 log.log(Level.SEVERE, "Something wrong occurred", e);
             }
@@ -36,7 +38,9 @@ public class RegistryPersister {
     public synchronized void save() {
         try (FileOutputStream fos = new FileOutputStream(file);
              ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+            log.info("Saving...");
             oos.writeObject(registry.getContacts());
+            log.info("Finished saving!");
         } catch (IOException e) {
             log.log(Level.SEVERE, "Something wrong occurred", e);
         }

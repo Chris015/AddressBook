@@ -5,12 +5,13 @@ import se.nackademin.christopherolsson.adressbook.user_interface.ConsolePrinter;
 import se.nackademin.christopherolsson.adressbook.user_interface.HelpMenu;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * @author Christopher Olsson on 2016-12-21.
  */
 public class HelpCommand implements Command {
-
+    private final static Logger log = Logger.getLogger(HelpCommand.class.getName());
     private String name = "help";
     private String description = "Displays the help menu";
 
@@ -41,12 +42,14 @@ public class HelpCommand implements Command {
     @Override
     public void execute() throws InvalidCommandParameterException {
         if (validate()) {
+            log.info("Showing help menu...");
             String menu = "";
             List<Command> commands = helpMenu.getCommands();
             for (Command command : commands) {
                 menu += format(command);
             }
             consolePrinter.print(menu);
+            log.info("Successfully showed the help menu.");
         }
 
     }
