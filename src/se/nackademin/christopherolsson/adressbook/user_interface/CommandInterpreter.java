@@ -47,7 +47,7 @@ public class CommandInterpreter {
                 returnCommand = new HelpCommand(consolePrinter, commandLine.getParameters());
                 break;
             default:
-                throw new UnknownCommandException(command + " is not a valid command");
+                throw new UnknownCommandException(command + " is not a valid command.\n");
         }
 
         return returnCommand;

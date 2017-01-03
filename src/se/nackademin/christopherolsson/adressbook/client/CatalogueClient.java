@@ -22,13 +22,16 @@ public class CatalogueClient {
     }
 
     public void connect() throws IOException {
+        log.info("Connecting to server: " + host + " on port " + port + "...");
         this.clientSocket = new Socket(host, port);
         writer = new PrintWriter(clientSocket.getOutputStream());
         reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+        log.info("Connection established to server: " + host + " on port " + port);
     }
 
     public void sendRequest(String request) {
         writer.println(request);
+        log.info("Request " + request + " sent to server.");
         writer.flush();
     }
 
@@ -49,6 +52,7 @@ public class CatalogueClient {
         try {
             sendRequest("exit");
             closeResources();
+            log.info("Connection closed.");
         } catch (IOException e) {
             log.log(Level.SEVERE, "Something wrong occurred", e);
         }
