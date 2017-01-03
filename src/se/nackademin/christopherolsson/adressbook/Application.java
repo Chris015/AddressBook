@@ -8,6 +8,9 @@ import se.nackademin.christopherolsson.adressbook.registry_file_handler.Registry
 import se.nackademin.christopherolsson.adressbook.user_interface.CommandLineInterface;
 import se.nackademin.christopherolsson.adressbook.user_interface.Console;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class Application {
@@ -19,7 +22,21 @@ public class Application {
     private RegistryPersister registryPersister = new RegistryPersister(registry);
     private AutoSave autoSave = new AutoSave(registryPersister);
 
-    public void start() {
+    public static void main(String[] args) {
+        Application application = new Application();
+        application.logSetup();
+        application.start();
+    }
+
+    private void logSetup() {
+        try (FileInputStream fileInputStream = new FileInputStream("logging.properties")){
+            LogManager.getLogManager().readConfiguration(fileInputStream);
+        } catch (IOException e) {
+            throw new RuntimeException("Could not load log properties");
+        }
+    }
+
+    private void start() {
         log.info("Program started.");
         catalogueLoader.run();
         registryPersister.load();
